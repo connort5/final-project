@@ -1,0 +1,20 @@
+---
+title: "A6 Collaboration"
+author: "Connor Tatman, Esha Gulati, Jamie Fong, Sangwon Yoon, AE6"
+date: "February 22, 2019"
+output: html_document
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Section 1. Problem Domain Description
+
+### Section 1.1 Critical Analysis Questions
+
+## Section 2. Data Description
+
+## Section 3. Preliminary Analysis
+
+## Section 4. Proposed Data Presentation
