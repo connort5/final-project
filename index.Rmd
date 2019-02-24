@@ -8,6 +8,7 @@ output: html_document
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 source("analysis.R")
+library(knitr)
 ```
 
 ## Section 1. Problem Domain Description
@@ -15,6 +16,30 @@ source("analysis.R")
 ### Section 1.1 Critical Analysis Questions
 
 ## Section 2. Data Description
+```{r data_description, echo = FALSE}
+drug_first_three <- knitr::kable(sorted_drug_data[1:3, ])
+excess_death_first_three <- knitr::kable(sorted_excess_death_data[1:3, ])
+```
+The two data sets that are being used in this report are *Drug Poisoning Mortality by State* and *Potentially Excess Deaths from the Five Leading Causes of Death*. The former contains state names along with statistics about drug mortality, which is sorted by categories such as race and gender. The latter deals with the five leading causes of death, also broken down by state and containing statistics on death rates. The data concerning drugs was originally collected by the National Center for Health Statistics. National Vital Statistics System: Mortality data, and can be found online ([here]( http://www.cdc.gov/nchs/deaths.htm)). Likewise, the date concerning excess deaths was collected by CDC/NCHS, National Vital Statistics System ([more info](http://www.cdc.gov/nchs/deaths.htm)), and mortality data and CDC WONDER ([more info](http://wonder.cdc.gov)).
+
+*Drug Poisoning Mortality by State Data Sample:* 
+`r drug_first_three`
+
+Glossary:  
+- State: The place where the data is collected from.      
+- Year: The year the data was collected.      
+-Age.Group: Splits up the data by ranges in age (65â???"74 for example would be those aged between 65 and 74).  
+- Race.and.Hispanic.Origin: 
+  
+*The full, raw data set can be downloaded [here]( https://data.cdc.gov/api/views/xbxb-epbu/rows.csv?accessType=DOWNLOAD).\  
+  
+  
+  
+*Potentially Excess Deaths from the Five Leading Causes of Death Data Sample:* 
+`r excess_death_first_three`
+*The full, raw data set can be downloaded [here](https://data.cdc.gov/api/views/vdpk-qzpr/rows.csv?accessType=DOWNLOAD).
+
+
 
 ## Section 3. Preliminary Analysis
 
