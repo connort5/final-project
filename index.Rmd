@@ -14,6 +14,8 @@ library(knitr)
 ## Section 1. Problem Domain Description
 
 ### Section 1.1 Critical Analysis Questions
+*Which percentage of deaths to population (drug usage or heart disease) has seen a bigger increase between the years of 2005-2015?*
+This question will provide us with a unique insight as to whether heart disease or drug usage has become an increasing problem in the past 10 years and will provide us with data that can be considered in policy implementation to help lower these numbers. *In this case, the past 10 years will be 2005-2015; the most recent data provided. 
 
 ## Section 2. Data Description
 ```{r data_description, echo = FALSE}
