@@ -30,15 +30,28 @@ The two data sets that are being used in this report are *Drug Poisoning Mortali
 Glossary:  
 - State: The place where the data is collected from.      
 - Year: The year the data was collected.      
--Age.Group: Splits up the data by ranges in age (65â???"74 for example would be those aged between 65 and 74).  
-- Race.and.Hispanic.Origin: 
-  
-*The full, raw data set can be downloaded [here]( https://data.cdc.gov/api/views/xbxb-epbu/rows.csv?accessType=DOWNLOAD).\  
-  
-  
+- Age.Group: Splits up the data by ranges in age (65â???"74 for example would be those aged between 65 and 74).  
+- Race.and.Hispanic.Origin: Organizes the data by race, using hispanic as the default race (Ex: non-hispanic black).  
+- Deaths: Drug related deaths.  
+- Population: Total population of the demographic.  
+- Crude.Death.Rate: The percentage of deaths over the population. The percent of drug related deaths for the stated data.   
+   
+  *The full, raw data set can be downloaded [here]( https://data.cdc.gov/api/views/xbxb-epbu/rows.csv?accessType=DOWNLOAD).   
   
 *Potentially Excess Deaths from the Five Leading Causes of Death Data Sample:* 
 `r excess_death_first_three`
+Glossary: 
+- Year: The year the data was collected.   
+- Cause.of.Death: States the cause of death from among the top 5 causes of death in the US.   
+- State: The place where the data is collected from.   
+- Age.Range: The range of ages that the data pertains to.   
+- Benchmark: The number that the expected deaths column is based off of. As the data can   change over time, so can the benchmark, so multiple are used to ensure more presise results.  
+- Locality: Shows whether the data comes from metropolitan areas, nonmetropolitan, or both.  
+- Observed.Deaths: The total number of deaths as a result of the cause of death.   
+- Population: Total population of the demographic.    
+- Expected.Deaths: The number of deaths due to the cause of death that is predicted using the benchmark.   
+- Potentially.Excessive.Deaths: Deaths that were statistically predicted to not occur that *did* occur in the given period.   
+- Percent.Potentially.Excessive.Deaths: The percent of Potentially.Excessive.Deaths over population.   
 *The full, raw data set can be downloaded [here](https://data.cdc.gov/api/views/vdpk-qzpr/rows.csv?accessType=DOWNLOAD).
 
 
