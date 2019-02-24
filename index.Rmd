@@ -8,8 +8,10 @@ output: html_document
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 source("analysis.R")
-drug_poisoning <- read.csv("data/drug_poisoning.csv", stringsAsFactors = FALSE)
+library(dplyr)
+library(knitr)
 excess_deaths <- read.csv("data/excess_deaths.csv", stringsAsFactors = FALSE)
+drug_poisoning <- read.csv("data/drug_poisoning.csv", stringsAsFactors = FALSE)
 ```
 
 ## Section 1. Problem Domain Description
@@ -32,5 +34,13 @@ This question will reveal if there has been a consistent trend (i.e. decrease of
 ## Section 2. Data Description
 
 ## Section 3. Preliminary Analysis
+
+```{r summary_tables, echo = FALSE}
+summarized_excess_deaths <- summarize_excess_deaths(excess_deaths)
+summarized_drug_poisoning <- summarize_drug_poisoning(drug_poisoning)
+
+kable(summarized_excess_deaths)
+kable(summarized_drug_poisoning)
+```
 
 ## Section 4. Proposed Data Presentation
