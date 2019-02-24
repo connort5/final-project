@@ -199,6 +199,10 @@ $(document).ready(function () {
 <p>Excess deaths are definied as “deaths that exceed the numbers that would be expected if the death rates of states with the lowest rates (benchmarks) occurred across all states.” <a href="https://catalog.data.gov/dataset/nchs-potentially-excess-deaths-from-the-five-leading-causes-of-death">data.gov</a> The five leading causes of death in this dataset are: Cancer, Chronic Lower Respiratory Disease, Stroke, Heart Disease, and Unintentional Injury.</p>
 <div id="section-1.1-critical-analysis-questions" class="section level3">
 <h3>Section 1.1 Critical Analysis Questions</h3>
+<p><strong>How are the rates of unintentional injury related to the rates of fatal poisoning in the United States from 2005-2015?</strong></p>
+<p>This question is of interest because by analyzing the unintentional death rates from injury and comparing them to rates of drug poisoning, we can understand how strongly drug use correlates with deaths from unintentional injury. It is known that drugs inhibit a person’s judgement and coordination, which may lead to injuries. We can analyze the data in the years that they overlap and compare the death rates from unintentional injury to poisoning.</p>
+<p><strong>How does the trend of change of fatal poisoning over the years compare to those of the other causes of death? (Sangwon)</strong></p>
+<p>This question will reveal if there has been a consistent trend (i.e. decrease of fata poisoning over the years), and if so, how the rate of that change compares to the rate of other changes. This will represent if fatal poisoning has been a low or high priority for prevention compared to other causes of death.</p>
 </div>
 </div>
 <div id="section-2.-data-description" class="section level2">
@@ -206,6 +210,8 @@ $(document).ready(function () {
 </div>
 <div id="section-3.-preliminary-analysis" class="section level2">
 <h2>Section 3. Preliminary Analysis</h2>
+<div id="excess-deaths" class="section level3">
+<h3>Excess Deaths</h3>
 <table>
 <thead>
 <tr class="header">
@@ -221,7 +227,7 @@ $(document).ready(function () {
 <tbody>
 <tr class="odd">
 <td align="left">Alabama</td>
-<td align="right">4733.4182</td>
+<td align="right">4733.418</td>
 <td align="right">1712</td>
 <td align="right">9023</td>
 <td align="right">4677757.3</td>
@@ -230,7 +236,7 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Alaska</td>
-<td align="right">391.8000</td>
+<td align="right">391.800</td>
 <td align="right">98</td>
 <td align="right">913</td>
 <td align="right">702761.5</td>
@@ -239,7 +245,7 @@ $(document).ready(function () {
 </tr>
 <tr class="odd">
 <td align="left">Arizona</td>
-<td align="right">4385.9455</td>
+<td align="right">4385.945</td>
 <td align="right">1236</td>
 <td align="right">9873</td>
 <td align="right">6283242.4</td>
@@ -248,7 +254,7 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Arkansas</td>
-<td align="right">2890.9636</td>
+<td align="right">2890.964</td>
 <td align="right">995</td>
 <td align="right">5829</td>
 <td align="right">2850967.0</td>
@@ -257,7 +263,7 @@ $(document).ready(function () {
 </tr>
 <tr class="odd">
 <td align="left">California</td>
-<td align="right">21703.0727</td>
+<td align="right">21703.073</td>
 <td align="right">7469</td>
 <td align="right">48075</td>
 <td align="right">36753544.0</td>
@@ -266,438 +272,18 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Colorado</td>
-<td align="right">2806.9636</td>
+<td align="right">2806.964</td>
 <td align="right">852</td>
 <td align="right">6316</td>
 <td align="right">4968799.1</td>
 <td align="right">4575586</td>
 <td align="right">5372595</td>
 </tr>
-<tr class="odd">
-<td align="left">Connecticut</td>
-<td align="right">2356.7455</td>
-<td align="right">583</td>
-<td align="right">5655</td>
-<td align="right">3478444.4</td>
-<td align="right">3432262</td>
-<td align="right">3506892</td>
-</tr>
-<tr class="even">
-<td align="left">Delaware</td>
-<td align="right">732.6364</td>
-<td align="right">223</td>
-<td align="right">1671</td>
-<td align="right">882582.8</td>
-<td align="right">832296</td>
-<td align="right">927282</td>
-</tr>
-<tr class="odd">
-<td align="left">District of</td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-<td align="right"></td>
-</tr>
-<tr class="even">
-<td align="left">Columbia</td>
-<td align="right">450.9818</td>
-<td align="right">94</td>
-<td align="right">1081 6000</td>
-<td align="right">90.5 558</td>
-<td align="right">061 660</td>
-<td align="right">781</td>
-</tr>
-<tr class="odd">
-<td align="left">Florida</td>
-<td align="right">15971.1818</td>
-<td align="right">4900</td>
-<td align="right">35897</td>
-<td align="right">18503528.0</td>
-<td align="right">17477592</td>
-<td align="right">19730996</td>
-</tr>
-<tr class="even">
-<td align="left">Georgia</td>
-<td align="right">6857.9091</td>
-<td align="right">2416</td>
-<td align="right">14795</td>
-<td align="right">9546486.7</td>
-<td align="right">8829410</td>
-<td align="right">10078913</td>
-</tr>
-<tr class="odd">
-<td align="left">Hawaii</td>
-<td align="right">854.5818</td>
-<td align="right">184</td>
-<td align="right">1995</td>
-<td align="right">1331251.7</td>
-<td align="right">1269776</td>
-<td align="right">1393300</td>
-</tr>
-<tr class="even">
-<td align="left">Idaho</td>
-<td align="right">1019.1818</td>
-<td align="right">311</td>
-<td align="right">2338</td>
-<td align="right">1533245.6</td>
-<td align="right">1407169</td>
-<td align="right">1626996</td>
-</tr>
-<tr class="odd">
-<td align="left">Illinois</td>
-<td align="right">9269.3636</td>
-<td align="right">2925</td>
-<td align="right">20393</td>
-<td align="right">12554618.5</td>
-<td align="right">12401857</td>
-<td align="right">12629428</td>
-</tr>
-<tr class="even">
-<td align="left">Indiana</td>
-<td align="right">5381.4364</td>
-<td align="right">1716</td>
-<td align="right">11472</td>
-<td align="right">6357419.8</td>
-<td align="right">6178925</td>
-<td align="right">6491870</td>
-</tr>
-<tr class="odd">
-<td align="left">Iowa</td>
-<td align="right">2395.4909</td>
-<td align="right">655</td>
-<td align="right">5252</td>
-<td align="right">2970625.9</td>
-<td align="right">2895331</td>
-<td align="right">3044713</td>
-</tr>
-<tr class="even">
-<td align="left">Kansas</td>
-<td align="right">2105.7091</td>
-<td align="right">661</td>
-<td align="right">4555</td>
-<td align="right">2781361.4</td>
-<td align="right">2691063</td>
-<td align="right">2847016</td>
-</tr>
-<tr class="odd">
-<td align="left">Kentucky</td>
-<td align="right">4298.7455</td>
-<td align="right">1235</td>
-<td align="right">8976</td>
-<td align="right">4256716.3</td>
-<td align="right">4121896</td>
-<td align="right">4347731</td>
-</tr>
-<tr class="even">
-<td align="left">Louisiana</td>
-<td align="right">4096.6909</td>
-<td align="right">1317</td>
-<td align="right">8227</td>
-<td align="right">4463849.4</td>
-<td align="right">4243961</td>
-<td align="right">4594745</td>
-</tr>
-<tr class="odd">
-<td align="left">Maine</td>
-<td align="right">1144.6727</td>
-<td align="right">307</td>
-<td align="right">2780</td>
-<td align="right">1298515.3</td>
-<td align="right">1293394</td>
-<td align="right">1302594</td>
-</tr>
-<tr class="even">
-<td align="left">Maryland</td>
-<td align="right">3965.3273</td>
-<td align="right">1194</td>
-<td align="right">8968</td>
-<td align="right">5691681.5</td>
-<td align="right">5512500</td>
-<td align="right">5893187</td>
-</tr>
-<tr class="odd">
-<td align="left">Massachusetts</td>
-<td align="right">4363.9273</td>
-<td align="right">1112</td>
-<td align="right">10913</td>
-<td align="right">6422501.4</td>
-<td align="right">6275264</td>
-<td align="right">6635864</td>
-</tr>
-<tr class="even">
-<td align="left">Michigan</td>
-<td align="right">8284.8727</td>
-<td align="right">2374</td>
-<td align="right">17535</td>
-<td align="right">9746080.9</td>
-<td align="right">9676932</td>
-<td align="right">9889107</td>
-</tr>
-<tr class="odd">
-<td align="left">Minnesota</td>
-<td align="right">3129.6727</td>
-<td align="right">961</td>
-<td align="right">7902</td>
-<td align="right">5203006.3</td>
-<td align="right">5024975</td>
-<td align="right">5371385</td>
-</tr>
-<tr class="even">
-<td align="left">Mississippi</td>
-<td align="right">2973.4000</td>
-<td align="right">982</td>
-<td align="right">5949</td>
-<td align="right">2914192.9</td>
-<td align="right">2863257</td>
-<td align="right">2944444</td>
-</tr>
-<tr class="odd">
-<td align="left">Missouri</td>
-<td align="right">5337.6182</td>
-<td align="right">1668</td>
-<td align="right">10998</td>
-<td align="right">5850670.5</td>
-<td align="right">5688192</td>
-<td align="right">5956942</td>
-</tr>
-<tr class="even">
-<td align="left">Montana</td>
-<td align="right">795.7455</td>
-<td align="right">212</td>
-<td align="right">1743</td>
-<td align="right">969182.3</td>
-<td align="right">922446</td>
-<td align="right">1010524</td>
-</tr>
-<tr class="odd">
-<td align="left">Nebraska</td>
-<td align="right">1258.6364</td>
-<td align="right">388</td>
-<td align="right">2809</td>
-<td align="right">1787764.9</td>
-<td align="right">1725913</td>
-<td align="right">1853966</td>
-</tr>
-<tr class="even">
-<td align="left">Nevada</td>
-<td align="right">2110.2364</td>
-<td align="right">584</td>
-<td align="right">4554</td>
-<td align="right">2659553.5</td>
-<td align="right">2409105</td>
-<td align="right">2851197</td>
-</tr>
-<tr class="odd">
-<td align="left">New Hampshire</td>
-<td align="right">941.9455</td>
-<td align="right">228</td>
-<td align="right">2297</td>
-<td align="right">1291992.8</td>
-<td align="right">1277295</td>
-<td align="right">1301664</td>
-</tr>
-<tr class="even">
-<td align="left">New Jersey</td>
-<td align="right">6011.6909</td>
-<td align="right">1475</td>
-<td align="right">14287</td>
-<td align="right">8615889.4</td>
-<td align="right">8500084</td>
-<td align="right">8761003</td>
-</tr>
-<tr class="odd">
-<td align="left">New Mexico</td>
-<td align="right">1446.9636</td>
-<td align="right">377</td>
-<td align="right">3040</td>
-<td align="right">2005285.7</td>
-<td align="right">1905837</td>
-<td align="right">2050661</td>
-</tr>
-<tr class="even">
-<td align="left">New York</td>
-<td align="right">13478.3455</td>
-<td align="right">3399</td>
-<td align="right">29781</td>
-<td align="right">19016770.8</td>
-<td align="right">18752074</td>
-<td align="right">19362320</td>
-</tr>
-<tr class="odd">
-<td align="left">North Carolina</td>
-<td align="right">7495.2727</td>
-<td align="right">2645</td>
-<td align="right">16619</td>
-<td align="right">9331620.8</td>
-<td align="right">8585656</td>
-<td align="right">9867758</td>
-</tr>
-<tr class="even">
-<td align="left">North Dakota</td>
-<td align="right">479.7818</td>
-<td align="right">131</td>
-<td align="right">1118</td>
-<td align="right">669254.5</td>
-<td align="right">630555</td>
-<td align="right">738841</td>
-</tr>
-<tr class="odd">
-<td align="left">Ohio</td>
-<td align="right">10129.1273</td>
-<td align="right">3223</td>
-<td align="right">21404</td>
-<td align="right">11306406.6</td>
-<td align="right">11266794</td>
-<td align="right">11360403</td>
-</tr>
-<tr class="even">
-<td align="left">Oklahoma</td>
-<td align="right">3708.3091</td>
-<td align="right">1194</td>
-<td align="right">7093</td>
-<td align="right">3679329.6</td>
-<td align="right">3492850</td>
-<td align="right">3841889</td>
-</tr>
-<tr class="odd">
-<td align="left">Oregon</td>
-<td align="right">2727.8364</td>
-<td align="right">909</td>
-<td align="right">6627</td>
-<td align="right">3751510.0</td>
-<td align="right">3547067</td>
-<td align="right">3944648</td>
-</tr>
-<tr class="even">
-<td align="left">Pennsylvania</td>
-<td align="right">11029.1091</td>
-<td align="right">3347</td>
-<td align="right">24613</td>
-<td align="right">12365682.3</td>
-<td align="right">12185345</td>
-<td align="right">12468675</td>
-</tr>
-<tr class="odd">
-<td align="left">Rhode Island</td>
-<td align="right">796.9455</td>
-<td align="right">172</td>
-<td align="right">1863</td>
-<td align="right">1029275.5</td>
-<td align="right">1022728</td>
-<td align="right">1044317</td>
-</tr>
-<tr class="even">
-<td align="left">South Carolina</td>
-<td align="right">4086.6182</td>
-<td align="right">1452</td>
-<td align="right">8616</td>
-<td align="right">4540352.7</td>
-<td align="right">4212837</td>
-<td align="right">4813890</td>
-</tr>
-<tr class="odd">
-<td align="left">South Dakota</td>
-<td align="right">605.8364</td>
-<td align="right">168</td>
-<td align="right">1340</td>
-<td align="right">797397.5</td>
-<td align="right">758041</td>
-<td align="right">837101</td>
-</tr>
-<tr class="even">
-<td align="left">Tennessee</td>
-<td align="right">6002.3455</td>
-<td align="right">2000</td>
-<td align="right">12380</td>
-<td align="right">6232478.4</td>
-<td align="right">5905302</td>
-<td align="right">6486563</td>
-</tr>
-<tr class="odd">
-<td align="left">Texas</td>
-<td align="right">15903.1455</td>
-<td align="right">5781</td>
-<td align="right">33560</td>
-<td align="right">24855046.9</td>
-<td align="right">22522243</td>
-<td align="right">27094675</td>
-</tr>
-<tr class="even">
-<td align="left">United States</td>
-<td align="right">229043.8909</td>
-<td align="right">73717</td>
-<td align="right">493526</td>
-<td align="right">303261762.9</td>
-<td align="right">290823300</td>
-<td align="right">315131659</td>
-</tr>
-<tr class="odd">
-<td align="left">Utah</td>
-<td align="right">1175.4909</td>
-<td align="right">390</td>
-<td align="right">2527</td>
-<td align="right">2718458.5</td>
-<td align="right">2432549</td>
-<td align="right">2960211</td>
-</tr>
-<tr class="even">
-<td align="left">Vermont</td>
-<td align="right">476.1636</td>
-<td align="right">104</td>
-<td align="right">1170</td>
-<td align="right">612108.6</td>
-<td align="right">610268</td>
-<td align="right">613094</td>
-</tr>
-<tr class="odd">
-<td align="left">Virginia</td>
-<td align="right">5535.1636</td>
-<td align="right">1866</td>
-<td align="right">12492</td>
-<td align="right">7878814.5</td>
-<td align="right">7477038</td>
-<td align="right">8240481</td>
-</tr>
-<tr class="even">
-<td align="left">Washington</td>
-<td align="right">4336.2727</td>
-<td align="right">1287</td>
-<td align="right">10404</td>
-<td align="right">6608341.4</td>
-<td align="right">6159637</td>
-<td align="right">7039367</td>
-</tr>
-<tr class="odd">
-<td align="left">West Virginia</td>
-<td align="right">2063.4182</td>
-<td align="right">600</td>
-<td align="right">4223</td>
-<td align="right">1807973.6</td>
-<td align="right">1788536</td>
-<td align="right">1818470</td>
-</tr>
-<tr class="even">
-<td align="left">Wisconsin</td>
-<td align="right">4127.8909</td>
-<td align="right">1247</td>
-<td align="right">9418</td>
-<td align="right">5558033.9</td>
-<td align="right">5440614</td>
-<td align="right">5642080</td>
-</tr>
-<tr class="odd">
-<td align="left">Wyoming</td>
-<td align="right">419.2909</td>
-<td align="right">99</td>
-<td align="right">856</td>
-<td align="right">549297.2</td>
-<td align="right">506692</td>
-<td align="right">575843</td>
-</tr>
 </tbody>
 </table>
+</div>
+<div id="drug-poisoning" class="section level3">
+<h3>Drug Poisoning</h3>
 <table>
 <thead>
 <tr class="header">
@@ -713,7 +299,7 @@ $(document).ready(function () {
 <tbody>
 <tr class="odd">
 <td align="left">Alabama</td>
-<td align="right">454.22222</td>
+<td align="right">454.2222</td>
 <td align="right">169</td>
 <td align="right">756</td>
 <td align="right">4667601.8</td>
@@ -722,7 +308,7 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Alaska</td>
-<td align="right">94.00000</td>
+<td align="right">94.0000</td>
 <td align="right">46</td>
 <td align="right">131</td>
 <td align="right">686719.4</td>
@@ -731,7 +317,7 @@ $(document).ready(function () {
 </tr>
 <tr class="odd">
 <td align="left">Arizona</td>
-<td align="right">914.55556</td>
+<td align="right">914.5556</td>
 <td align="right">511</td>
 <td align="right">1382</td>
 <td align="right">6066188.4</td>
@@ -740,7 +326,7 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Arkansas</td>
-<td align="right">282.27778</td>
+<td align="right">282.2778</td>
 <td align="right">113</td>
 <td align="right">401</td>
 <td align="right">2839743.7</td>
@@ -749,7 +335,7 @@ $(document).ready(function () {
 </tr>
 <tr class="odd">
 <td align="left">California</td>
-<td align="right">3560.05556</td>
+<td align="right">3560.0556</td>
 <td align="right">1226</td>
 <td align="right">4659</td>
 <td align="right">36540670.2</td>
@@ -758,429 +344,16 @@ $(document).ready(function () {
 </tr>
 <tr class="even">
 <td align="left">Colorado</td>
-<td align="right">662.61111</td>
+<td align="right">662.6111</td>
 <td align="right">349</td>
 <td align="right">942</td>
 <td align="right">4862230.4</td>
 <td align="right">4226018</td>
 <td align="right">5540545</td>
 </tr>
-<tr class="odd">
-<td align="left">Connecticut</td>
-<td align="right">445.83333</td>
-<td align="right">295</td>
-<td align="right">971</td>
-<td align="right">3523794.4</td>
-<td align="right">3386401</td>
-<td align="right">3596677</td>
-</tr>
-<tr class="even">
-<td align="left">Delaware</td>
-<td align="right">120.61111</td>
-<td align="right">50</td>
-<td align="right">282</td>
-<td align="right">869031.0</td>
-<td align="right">774990</td>
-<td align="right">952065</td>
-</tr>
-<tr class="odd">
-<td align="left">District of Columbia</td>
-<td align="right">90.11111</td>
-<td align="right">26</td>
-<td align="right">269</td>
-<td align="right">601203.6</td>
-<td align="right">567136</td>
-<td align="right">681170</td>
-</tr>
-<tr class="even">
-<td align="left">Florida</td>
-<td align="right">2533.22222</td>
-<td align="right">997</td>
-<td align="right">4728</td>
-<td align="right">18237258.1</td>
-<td align="right">15759421</td>
-<td align="right">20612439</td>
-</tr>
-<tr class="odd">
-<td align="left">Georgia</td>
-<td align="right">866.38889</td>
-<td align="right">283</td>
-<td align="right">1394</td>
-<td align="right">9283595.5</td>
-<td align="right">8045966</td>
-<td align="right">10310371</td>
-</tr>
-<tr class="even">
-<td align="left">Hawaii</td>
-<td align="right">125.55556</td>
-<td align="right">63</td>
-<td align="right">191</td>
-<td align="right">1323354.7</td>
-<td align="right">1210300</td>
-<td align="right">1431603</td>
-</tr>
-<tr class="odd">
-<td align="left">Idaho</td>
-<td align="right">147.61111</td>
-<td align="right">64</td>
-<td align="right">243</td>
-<td align="right">1489382.4</td>
-<td align="right">1275675</td>
-<td align="right">1683140</td>
-</tr>
-<tr class="even">
-<td align="left">Illinois</td>
-<td align="right">1314.94444</td>
-<td align="right">825</td>
-<td align="right">2411</td>
-<td align="right">12690612.7</td>
-<td align="right">12359023</td>
-<td align="right">12882135</td>
-</tr>
-<tr class="odd">
-<td align="left">Indiana</td>
-<td align="right">762.77778</td>
-<td align="right">191</td>
-<td align="right">1526</td>
-<td align="right">6370688.4</td>
-<td align="right">6044972</td>
-<td align="right">6633053</td>
-</tr>
-<tr class="even">
-<td align="left">Iowa</td>
-<td align="right">188.50000</td>
-<td align="right">53</td>
-<td align="right">314</td>
-<td align="right">3013373.6</td>
-<td align="right">2917637</td>
-<td align="right">3134693</td>
-</tr>
-<tr class="odd">
-<td align="left">Kansas</td>
-<td align="right">243.05556</td>
-<td align="right">89</td>
-<td align="right">332</td>
-<td align="right">2799988.7</td>
-<td align="right">2678340</td>
-<td align="right">2911641</td>
-</tr>
-<tr class="even">
-<td align="left">Kentucky</td>
-<td align="right">768.50000</td>
-<td align="right">197</td>
-<td align="right">1419</td>
-<td align="right">4250370.1</td>
-<td align="right">4018053</td>
-<td align="right">4436974</td>
-</tr>
-<tr class="odd">
-<td align="left">Louisiana</td>
-<td align="right">597.05556</td>
-<td align="right">188</td>
-<td align="right">996</td>
-<td align="right">4527664.3</td>
-<td align="right">4302665</td>
-<td align="right">4681666</td>
-</tr>
-<tr class="even">
-<td align="left">Maine</td>
-<td align="right">160.77778</td>
-<td align="right">61</td>
-<td align="right">353</td>
-<td align="right">1315448.2</td>
-<td align="right">1266808</td>
-<td align="right">1331479</td>
-</tr>
-<tr class="odd">
-<td align="left">Maryland</td>
-<td align="right">842.83333</td>
-<td align="right">623</td>
-<td align="right">2044</td>
-<td align="right">5672903.4</td>
-<td align="right">5254511</td>
-<td align="right">6016447</td>
-</tr>
-<tr class="even">
-<td align="left">Massachusetts</td>
-<td align="right">938.11111</td>
-<td align="right">463</td>
-<td align="right">2227</td>
-<td align="right">6520743.5</td>
-<td align="right">6317345</td>
-<td align="right">6811779</td>
-</tr>
-<tr class="odd">
-<td align="left">Michigan</td>
-<td align="right">1212.00000</td>
-<td align="right">460</td>
-<td align="right">2347</td>
-<td align="right">9954189.0</td>
-<td align="right">9876187</td>
-<td align="right">10055315</td>
-</tr>
-<tr class="even">
-<td align="left">Minnesota</td>
-<td align="right">364.88889</td>
-<td align="right">130</td>
-<td align="right">672</td>
-<td align="right">5214976.5</td>
-<td align="right">4873481</td>
-<td align="right">5519952</td>
-</tr>
-<tr class="odd">
-<td align="left">Mississippi</td>
-<td align="right">267.33333</td>
-<td align="right">87</td>
-<td align="right">352</td>
-<td align="right">2926944.3</td>
-<td align="right">2828412</td>
-<td align="right">2994079</td>
-</tr>
-<tr class="even">
-<td align="left">Missouri</td>
-<td align="right">752.27778</td>
-<td align="right">276</td>
-<td align="right">1371</td>
-<td align="right">5868995.9</td>
-<td align="right">5561950</td>
-<td align="right">6093000</td>
-</tr>
-<tr class="odd">
-<td align="left">Montana</td>
-<td align="right">105.38889</td>
-<td align="right">41</td>
-<td align="right">142</td>
-<td align="right">966268.8</td>
-<td align="right">897511</td>
-<td align="right">1042520</td>
-</tr>
-<tr class="even">
-<td align="left">Nebraska</td>
-<td align="right">92.66667</td>
-<td align="right">39</td>
-<td align="right">146</td>
-<td align="right">1797594.0</td>
-<td align="right">1704765</td>
-<td align="right">1907116</td>
-</tr>
-<tr class="odd">
-<td align="left">Nevada</td>
-<td align="right">475.22222</td>
-<td align="right">227</td>
-<td align="right">665</td>
-<td align="right">2518741.6</td>
-<td align="right">1934719</td>
-<td align="right">2940058</td>
-</tr>
-<tr class="even">
-<td align="left">New Hampshire</td>
-<td align="right">183.00000</td>
-<td align="right">45</td>
-<td align="right">481</td>
-<td align="right">1298603.0</td>
-<td align="right">1222015</td>
-<td align="right">1334795</td>
-</tr>
-<tr class="odd">
-<td align="left">New Jersey</td>
-<td align="right">919.44444</td>
-<td align="right">263</td>
-<td align="right">2056</td>
-<td align="right">8707282.5</td>
-<td align="right">8359593</td>
-<td align="right">8958013</td>
-</tr>
-<tr class="even">
-<td align="left">New Mexico</td>
-<td align="right">414.88889</td>
-<td align="right">258</td>
-<td align="right">547</td>
-<td align="right">1977298.8</td>
-<td align="right">1808082</td>
-<td align="right">2085572</td>
-</tr>
-<tr class="odd">
-<td align="left">New York</td>
-<td align="right">1652.77778</td>
-<td align="right">767</td>
-<td align="right">3638</td>
-<td align="right">19314911.1</td>
-<td align="right">18882726</td>
-<td align="right">19795791</td>
-</tr>
-<tr class="even">
-<td align="left">North Carolina</td>
-<td align="right">1055.33333</td>
-<td align="right">366</td>
-<td align="right">1956</td>
-<td align="right">9107552.8</td>
-<td align="right">7949362</td>
-<td align="right">10146788</td>
-</tr>
-<tr class="odd">
-<td align="left">North Dakota</td>
-<td align="right">27.11111</td>
-<td align="right">12</td>
-<td align="right">77</td>
-<td align="right">675110.3</td>
-<td align="right">638168</td>
-<td align="right">757952</td>
-</tr>
-<tr class="even">
-<td align="left">Ohio</td>
-<td align="right">1702.38889</td>
-<td align="right">467</td>
-<td align="right">4329</td>
-<td align="right">11493259.1</td>
-<td align="right">11335457</td>
-<td align="right">11614373</td>
-</tr>
-<tr class="odd">
-<td align="left">Oklahoma</td>
-<td align="right">562.38889</td>
-<td align="right">178</td>
-<td align="right">813</td>
-<td align="right">3664382.7</td>
-<td align="right">3437148</td>
-<td align="right">3923561</td>
-</tr>
-<tr class="even">
-<td align="left">Oregon</td>
-<td align="right">418.66667</td>
-<td align="right">208</td>
-<td align="right">532</td>
-<td align="right">3729023.4</td>
-<td align="right">3393941</td>
-<td align="right">4093465</td>
-</tr>
-<tr class="odd">
-<td align="left">Pennsylvania</td>
-<td align="right">1971.05556</td>
-<td align="right">958</td>
-<td align="right">4627</td>
-<td align="right">12562258.9</td>
-<td align="right">12263805</td>
-<td align="right">12802503</td>
-</tr>
-<tr class="even">
-<td align="left">Rhode Island</td>
-<td align="right">171.22222</td>
-<td align="right">58</td>
-<td align="right">326</td>
-<td align="right">1057129.1</td>
-<td align="right">1040402</td>
-<td align="right">1074579</td>
-</tr>
-<tr class="odd">
-<td align="left">South Carolina</td>
-<td align="right">503.16667</td>
-<td align="right">147</td>
-<td align="right">879</td>
-<td align="right">4455810.1</td>
-<td align="right">3974684</td>
-<td align="right">4961119</td>
-</tr>
-<tr class="even">
-<td align="left">South Dakota</td>
-<td align="right">42.11111</td>
-<td align="right">17</td>
-<td align="right">69</td>
-<td align="right">800406.1</td>
-<td align="right">750417</td>
-<td align="right">865454</td>
-</tr>
-<tr class="odd">
-<td align="left">Tennessee</td>
-<td align="right">925.38889</td>
-<td align="right">344</td>
-<td align="right">1630</td>
-<td align="right">6163601.3</td>
-<td align="right">5638708</td>
-<td align="right">6651194</td>
-</tr>
-<tr class="even">
-<td align="left">Texas</td>
-<td align="right">2072.44444</td>
-<td align="right">1021</td>
-<td align="right">2831</td>
-<td align="right">24085651.8</td>
-<td align="right">20558220</td>
-<td align="right">27862596</td>
-</tr>
-<tr class="odd">
-<td align="left">United States</td>
-<td align="right">35129.50000</td>
-<td align="right">16849</td>
-<td align="right">63632</td>
-<td align="right">301985914.4</td>
-<td align="right">279040238</td>
-<td align="right">323127513</td>
-</tr>
-<tr class="even">
-<td align="left">Utah</td>
-<td align="right">443.22222</td>
-<td align="right">205</td>
-<td align="right">646</td>
-<td align="right">2616756.9</td>
-<td align="right">2203483</td>
-<td align="right">3051217</td>
-</tr>
-<tr class="odd">
-<td align="left">Vermont</td>
-<td align="right">67.16667</td>
-<td align="right">29</td>
-<td align="right">125</td>
-<td align="right">620973.6</td>
-<td align="right">604687</td>
-<td align="right">626630</td>
-</tr>
-<tr class="even">
-<td align="left">Virginia</td>
-<td align="right">696.11111</td>
-<td align="right">366</td>
-<td align="right">1405</td>
-<td align="right">7768485.1</td>
-<td align="right">7000176</td>
-<td align="right">8411808</td>
-</tr>
-<tr class="odd">
-<td align="left">Washington</td>
-<td align="right">861.61111</td>
-<td align="right">499</td>
-<td align="right">1102</td>
-<td align="right">6517760.9</td>
-<td align="right">5842565</td>
-<td align="right">7288000</td>
-</tr>
-<tr class="even">
-<td align="left">West Virginia</td>
-<td align="right">408.72222</td>
-<td align="right">75</td>
-<td align="right">884</td>
-<td align="right">1831663.6</td>
-<td align="right">1801481</td>
-<td align="right">1855413</td>
-</tr>
-<tr class="odd">
-<td align="left">Wisconsin</td>
-<td align="right">585.55556</td>
-<td align="right">212</td>
-<td align="right">1074</td>
-<td align="right">5597883.1</td>
-<td align="right">5332666</td>
-<td align="right">5778708</td>
-</tr>
-<tr class="even">
-<td align="left">Wyoming</td>
-<td align="right">62.33333</td>
-<td align="right">20</td>
-<td align="right">109</td>
-<td align="right">539833.6</td>
-<td align="right">491780</td>
-<td align="right">586107</td>
-</tr>
 </tbody>
 </table>
+</div>
 </div>
 <div id="section-4.-proposed-data-presentation" class="section level2">
 <h2>Section 4. Proposed Data Presentation</h2>
