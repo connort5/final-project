@@ -10,8 +10,8 @@ knitr::opts_chunk$set(echo = TRUE)
 source("analysis.R")
 library(dplyr)
 library(knitr)
-drug_poisoning <- read.csv("data/drug_poisoning.csv", stringsAsFactors = FALSE)
 excess_deaths <- read.csv("data/excess_deaths.csv", stringsAsFactors = FALSE)
+drug_poisoning <- read.csv("data/drug_poisoning.csv", stringsAsFactors = FALSE)
 ```
 
 ## Section 1. Problem Domain Description
@@ -28,11 +28,13 @@ Excess deaths are definied as "deaths that exceed the numbers that would be expe
 ## Section 2. Data Description
 
 ## Section 3. Preliminary Analysis
-```{r}
-filtered_drug_poisoning <- filter_drug_poisoning(drug_poisoning)
-filtered_excess_deaths <- filter_excess_deaths(excess_deaths)
 
-kable(filtered_drug_poisoning)
-kable(filtered_excess_deaths)
+```{r summary_tables, echo = FALSE}
+summarized_excess_deaths <- summarize_excess_deaths(excess_deaths)
+summarized_drug_poisoning <- summarize_drug_poisoning(drug_poisoning)
+
+kable(summarized_excess_deaths)
+kable(summarized_drug_poisoning)
 ```
+
 ## Section 4. Proposed Data Presentation
