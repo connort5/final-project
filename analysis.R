@@ -10,7 +10,6 @@ excess_deaths <- read.csv("data/excess_deaths.csv", stringsAsFactors = FALSE)
 filtered_excess_deaths <- excess_deaths %>%
   filter(Locality == "All", Age.Range == "0-84", Benchmark == "Floating") %>%
   select(-State.FIPS.Code, -HHS.Region, -Locality, -Age.Range, -Benchmark) %>%
-  group_by(State) %>%
-  filter(Percent.Potentially.Excess.Deaths == max(Percent.Potentially.Excess.Deaths))
+  group_by(State)
 
 View(filtered_excess_deaths)
