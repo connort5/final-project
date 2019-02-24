@@ -12,4 +12,9 @@ filtered_excess_deaths <- excess_deaths %>%
   select(-State.FIPS.Code, -HHS.Region, -Locality, -Age.Range, -Benchmark) %>%
   group_by(State)
 
+filtered_drug_poisoning <- drug_poisoning %>%
+  filter(Sex == "Both Sexes", Age.Group == "All Ages", Race.and.Hispanic.Origin == "All Races-All Origins") %>%
+  select(-Sex, -Age.Group, -Race.and.Hispanic.Origin)
+
 View(filtered_excess_deaths)
+View(filtered_drug_poisoning)
