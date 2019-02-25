@@ -38,7 +38,6 @@ This question is of interest to us because by comparing the rates of fatal poiso
 ## Section 2. Data Description
 
 
-
 ## Section 3. Preliminary Analysis
 
 ### Excess Deaths
