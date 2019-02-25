@@ -63,6 +63,10 @@ By looking at the average rates of death from unintentional injury and poisoning
 
 Looking at the national total deaths for each cause over the years, it appears that deaths from fatal poisoning has increased at a comparatively higher rate compared to deaths from other causes.
 
+**How does the rate of fatal poisoning compare to the rates of the five leading causes of death in the excess death dataset?**
+
+When looking at the rate of increase from fatal poisoning in comparison to the increase in excess death throughout the 50 states it is apparent that fatal poisoning has had a higher rate that the other five leading causes. 
+
 ### Comparison between features of the two data sets
 *Comparing average rate of excess deaths per year and average rate of death by drug poisoning*
 
@@ -94,3 +98,7 @@ A line graph would be effective in displaying the correlation between death from
 ![*proposed data visualization for Q2*](visuals/graph_q2.jpg)
 
 A line graph showing the rates or changes in rates of death from each cause would be effective in showing how the trend for each cause of death over the years, especially drug poisoning compared to other causes.
+
+![*proposed data visualization for Q3*]
+
+A line graph showing the increase in death in average for the five leading causes vs. the average rate of death from fatal poisoning would be the most effective because it would show how their trends and how they relate to one another. 
