@@ -54,8 +54,10 @@ summarize_drug_poisoning <- function(df){
     min_population = min(Population),
     max_population = max(Population)
   )
-<<<<<<< HEAD
+  head(summarized_drug_poisoning)
 }
+
+
 ###########################
 ## Analysis for Questions##
 ##    (very general)     ##
@@ -129,17 +131,9 @@ avg_poison <- drug_poisoning %>%
 avg_excess_poison <- left_join(avg_excess, avg_poison, by = "State")
 avg_excess_poison$avg_excess_percent <- as.numeric(avg_excess_poison$avg_excess_percent)
 avg_excess_poison$avg_poison_rate <- as.numeric(avg_excess_poison$avg_poison_rate)
-View(avg_excess_poison)
   
 highest_avg <- avg_excess_poison %>% 
   mutate(combined_rates = (avg_excess_percent + avg_poison_rate)) %>% 
   filter(complete.cases(.)) %>% 
   filter(combined_rates == max(combined_rates))
   
-
-  
-=======
-  
-  head(summarized_drug_poisoning)
-}
->>>>>>> 60f292e1bda23a269c39ad81eca10d4315b6c517
