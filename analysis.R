@@ -1,5 +1,6 @@
 # Any data analysis will be written in this R script file and sourced into the R markdown file. 
 # This file is named "analysis.R"
+
 library(dplyr)
 
 # Temporary assignment for testing - remove before submitting
@@ -14,8 +15,6 @@ filter_excess_deaths <- function(df){
   
   filtered_excess_deaths
 }
-
-
 
 filter_drug_poisoning <- function(df){
   filtered_drug_poisoning <- df %>%
@@ -41,7 +40,7 @@ summarize_excess_deaths <- function(df){
     max_population = max(Population)
   )
   
-  summarized_excess_deaths
+  head(summarized_excess_deaths)
 }
 
 summarize_drug_poisoning <- function(df){
@@ -55,6 +54,7 @@ summarize_drug_poisoning <- function(df){
     min_population = min(Population),
     max_population = max(Population)
   )
+<<<<<<< HEAD
 }
 ###########################
 ## Analysis for Questions##
@@ -138,3 +138,8 @@ highest_avg <- avg_excess_poison %>%
   
 
   
+=======
+  
+  head(summarized_drug_poisoning)
+}
+>>>>>>> 60f292e1bda23a269c39ad81eca10d4315b6c517
