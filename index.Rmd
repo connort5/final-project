@@ -55,9 +55,13 @@ kable(summarized_drug_poisoning)
 
 ### High Level Answers to Questions
 
-**How are the rates of unintentional injury related to the rates of fatal poisoning in the United States from 2005-2015**
+**How are the rates of unintentional injury related to the rates of fatal poisoning in the United States from 2005-2015?**
 
-By looking at the average rates of death from unintentional injury and poisoning per year, we can see a general trend that when the average rate of unintentional injury goes up, the average rate of poisoning also goes up 
+By looking at the average rates of death from unintentional injury and poisoning per year, we can see a general trend that when the average rate of unintentional injury goes up, the average rate of poisoning also goes up.
+
+**How does the trend of change of fatal poisoning over the years compare to those of the other causes of death?**
+
+Looking at the national total deaths for each cause over the years, it appears that deaths from fatal poisoning has increased at a comparatively higher rate compared to deaths from other causes.
 
 ### Comparison between features of the two data sets
 *Comparing average rate of excess deaths per year and average rate of death by drug poisoning*
@@ -83,6 +87,10 @@ kable(highest_avg)
 
 ## Section 4. Proposed Data Presentation
 
-![*proposed data visualization for Q1*](graph_q1.jpg)
+![*proposed data visualization for Q1*](visuals/graph_q1.jpg)
 
 A line graph would be effective in displaying the correlation between death from unintentional injury and poisoning because you can see how closely the trends of the two lines relate over time. Looking to see if the lines move the same direction over time will show how closely related the two are. 
+
+![*proposed data visualization for Q2*](visuals/graph_q2.jpg)
+
+A line graph showing the rates or changes in rates of death from each cause would be effective in showing how the trend for each cause of death over the years, especially drug poisoning compared to other causes.
