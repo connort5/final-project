@@ -8,14 +8,11 @@ output: html_document
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 source("analysis.R")
-<<<<<<< HEAD
+
 library(dplyr)
 library(knitr)
 excess_deaths <- read.csv("data/excess_deaths.csv", stringsAsFactors = FALSE)
 drug_poisoning <- read.csv("data/drug_poisoning.csv", stringsAsFactors = FALSE)
-=======
-library(knitr)
->>>>>>> connor_section_2
 ```
 
 ## Section 1. Problem Domain Description
@@ -28,7 +25,7 @@ Excess deaths are definied as "deaths that exceed the numbers that would be expe
 
 
 ### Section 1.1 Critical Analysis Questions
-**Which percentage of deaths to population (drug usage or heart disease) has seen a bigger increase between the years of 2005-2015? (Connor)**
+**Which percentage of deaths to population (drug usage or heart disease) has seen a bigger increase between the years of 2005-2015? (Connor) **
 This question will provide us with a unique insight as to whether heart disease or drug usage has become an increasing problem in the past 10 years and will provide us with data that can be considered in policy implementation to help lower these numbers. *In this case, the past 10 years will be 2005-2015; the most recent data provided. 
 
 **How are the rates of unintentional injury related to the rates of fatal poisoning in the United States from 2005-2015 (Jamie)**
