@@ -53,9 +53,13 @@ kable(summarized_drug_poisoning)
 
 ### High Level Answers to Questions
 
-**How are the rates of unintentional injury related to the rates of fatal poisoning in the United States from 2005-2015**
+**How are the rates of unintentional injury related to the rates of fatal poisoning in the United States from 2005-2015?**
 
-By looking at the average rates of death from unintentional injury and poisoning per year, we can see a general trend that when the average rate of unintentional injury goes up, the average rate of poisoning also goes up 
+By looking at the average rates of death from unintentional injury and poisoning per year, we can see a general trend that when the average rate of unintentional injury goes up, the average rate of poisoning also goes up.
+
+**How does the trend of change of fatal poisoning over the years compare to those of the other causes of death?**
+
+Looking at the national total deaths for each cause over the years, it appears that deaths from fatal poisoning has increased at a comparatively higher rate compared to deaths from other causes.
 
 ### Comparison between features of the two data sets
 *Comparing average rate of excess deaths per year and average rate of death by drug poisoning*

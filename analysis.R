@@ -3,11 +3,10 @@
 
 library(dplyr)
 
-# Temporary assignment for testing - remove before submitting
-# Both are dataframes
 excess_deaths <- read.csv("data/excess_deaths.csv", stringsAsFactors = FALSE)
 drug_poisoning <- read.csv("data/drug_poisoning.csv", stringsAsFactors = FALSE)
 
+# Dropping unused columns
 filter_excess_deaths <- function(df){
   filtered_excess_deaths <- df %>%
   filter(Locality == "All", Age.Range == "0-84", Benchmark == "Floating") %>%
@@ -24,10 +23,8 @@ filter_drug_poisoning <- function(df){
   filtered_drug_poisoning
 }
 
-# Remove before submitting
-filtered_excess_deaths <- filter_excess_deaths(excess_deaths)
-filtered_drug_poisoning <- filter_drug_poisoning(drug_poisoning)
 
+# Summary tables for Section 3
 summarize_excess_deaths <- function(df){
   summarized_excess_deaths <- filter_excess_deaths(df) %>%
   group_by(State) %>%
@@ -136,4 +133,3 @@ highest_avg <- avg_excess_poison %>%
   mutate(combined_rates = (avg_excess_percent + avg_poison_rate)) %>% 
   filter(complete.cases(.)) %>% 
   filter(combined_rates == max(combined_rates))
-  
