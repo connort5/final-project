@@ -8,10 +8,14 @@ output: html_document
 ```{r setup, include = FALSE}
 knitr::opts_chunk$set(echo = TRUE)
 source("analysis.R")
+<<<<<<< HEAD
 library(dplyr)
 library(knitr)
 excess_deaths <- read.csv("data/excess_deaths.csv", stringsAsFactors = FALSE)
 drug_poisoning <- read.csv("data/drug_poisoning.csv", stringsAsFactors = FALSE)
+=======
+library(knitr)
+>>>>>>> connor_section_2
 ```
 
 ## Section 1. Problem Domain Description
@@ -24,6 +28,8 @@ Excess deaths are definied as "deaths that exceed the numbers that would be expe
 
 
 ### Section 1.1 Critical Analysis Questions
+**Which percentage of deaths to population (drug usage or heart disease) has seen a bigger increase between the years of 2005-2015? (Connor)**
+This question will provide us with a unique insight as to whether heart disease or drug usage has become an increasing problem in the past 10 years and will provide us with data that can be considered in policy implementation to help lower these numbers. *In this case, the past 10 years will be 2005-2015; the most recent data provided. 
 
 **How are the rates of unintentional injury related to the rates of fatal poisoning in the United States from 2005-2015 (Jamie)**
 This question is of interest because by analyzing the unintentional death rates from injury and comparing them to rates of drug poisoning, we can understand how strongly drug use correlates with deaths from unintentional injury. It is known that drugs inhibit a person's judgement and coordination, which may lead to injuries. We can analyze the data in the years that they overlap and compare the death rates from unintentional injury to poisoning.
@@ -34,6 +40,43 @@ This question will reveal if there has been a consistent trend (i.e. decrease of
 
 
 ## Section 2. Data Description
+```{r data_description, echo = FALSE}
+drug_first_three <- knitr::kable(sorted_drug_data[1:3, ])
+excess_death_first_three <- knitr::kable(sorted_excess_death_data[1:3, ])
+```
+The two data sets that are being used in this report are *Drug Poisoning Mortality by State* and *Potentially Excess Deaths from the Five Leading Causes of Death*. The former contains state names along with statistics about drug mortality, which is sorted by categories such as race and gender. The latter deals with the five leading causes of death, also broken down by state and containing statistics on death rates. The data concerning drugs was originally collected by the National Center for Health Statistics. National Vital Statistics System: Mortality data, and can be found online ([here]( http://www.cdc.gov/nchs/deaths.htm)). Likewise, the date concerning excess deaths was collected by CDC/NCHS, National Vital Statistics System ([more info](http://www.cdc.gov/nchs/deaths.htm)), and mortality data and CDC WONDER ([more info](http://wonder.cdc.gov)).
+
+*Drug Poisoning Mortality by State Data Sample:* 
+`r drug_first_three`
+
+Glossary:  
+- State: The place where the data is collected from.      
+- Year: The year the data was collected.      
+- Age.Group: Splits up the data by ranges in age (65â???"74 for example would be those aged between 65 and 74).  
+- Race.and.Hispanic.Origin: Organizes the data by race, using hispanic as the default race (Ex: non-hispanic black).  
+- Deaths: Drug related deaths.  
+- Population: Total population of the demographic.  
+- Crude.Death.Rate: The percentage of deaths over the population. The percent of drug related deaths for the stated data.   
+   
+  *The full, raw data set can be downloaded [here]( https://data.cdc.gov/api/views/xbxb-epbu/rows.csv?accessType=DOWNLOAD).   
+  
+*Potentially Excess Deaths from the Five Leading Causes of Death Data Sample:* 
+`r excess_death_first_three`
+Glossary: 
+- Year: The year the data was collected.   
+- Cause.of.Death: States the cause of death from among the top 5 causes of death in the US.   
+- State: The place where the data is collected from.   
+- Age.Range: The range of ages that the data pertains to.   
+- Benchmark: The number that the expected deaths column is based off of. As the data can   change over time, so can the benchmark, so multiple are used to ensure more presise results.  
+- Locality: Shows whether the data comes from metropolitan areas, nonmetropolitan, or both.  
+- Observed.Deaths: The total number of deaths as a result of the cause of death.   
+- Population: Total population of the demographic.    
+- Expected.Deaths: The number of deaths due to the cause of death that is predicted using the benchmark.   
+- Potentially.Excessive.Deaths: Deaths that were statistically predicted to not occur that *did* occur in the given period.   
+- Percent.Potentially.Excessive.Deaths: The percent of Potentially.Excessive.Deaths over population.   
+*The full, raw data set can be downloaded [here](https://data.cdc.gov/api/views/vdpk-qzpr/rows.csv?accessType=DOWNLOAD).
+
+
 
 
 

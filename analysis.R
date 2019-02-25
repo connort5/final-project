@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Any data analysis will be written in this R script file and sourced into the R markdown file. 
 # This file is named "analysis.R"
 
@@ -133,3 +134,22 @@ highest_avg <- avg_excess_poison %>%
   mutate(combined_rates = (avg_excess_percent + avg_poison_rate)) %>% 
   filter(complete.cases(.)) %>% 
   filter(combined_rates == max(combined_rates))
+
+#################################
+#Section 2 Data Description Code#
+#################################
+drug_data <- read.csv(
+  file =
+    "data/NCHS_-_Drug_Poisoning_Mortality_by_State__United_States.csv", stringsAsFactors = FALSE
+)
+
+excess_death_data <- read.csv(file = "data/NCHS_-_Potentially_Excess_Deaths_from_the_Five_Leading_Causes_of_Death.csv", stringsAsFactors = FALSE)
+
+sorted_drug_data <- select(drug_data, State, Year, Sex, Age.Group, Race.and.Hispanic.Origin, 
+                           Deaths, Population, Crude.Death.Rate)
+
+sorted_excess_death_data <- select(excess_death_data, Year, Cause.of.Death, State, Age.Range, 
+                                   Benchmark, Locality, Observed.Deaths, Population, Expected.Deaths,
+                                   Potentially.Excess.Deaths, Percent.Potentially.Excess.Deaths)  
+
+
