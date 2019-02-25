@@ -25,17 +25,18 @@ Excess deaths are definied as "deaths that exceed the numbers that would be expe
 
 
 ### Section 1.1 Critical Analysis Questions
-**Which percentage of deaths to population (drug usage or heart disease) has seen a bigger increase between the years of 2005-2015? (Connor) **
-This question will provide us with a unique insight as to whether heart disease or drug usage has become an increasing problem in the past 10 years and will provide us with data that can be considered in policy implementation to help lower these numbers. *In this case, the past 10 years will be 2005-2015; the most recent data provided. 
 
-**How are the rates of unintentional injury related to the rates of fatal poisoning in the United States from 2005-2015 (Jamie)**
+**Q1 How are the rates of unintentional injury related to the rates of fatal poisoning in the United States from 2005-2015 (Jamie)**
 This question is of interest because by analyzing the unintentional death rates from injury and comparing them to rates of drug poisoning, we can understand how strongly drug use correlates with deaths from unintentional injury. It is known that drugs inhibit a person's judgement and coordination, which may lead to injuries. We can analyze the data in the years that they overlap and compare the death rates from unintentional injury to poisoning.
 
-**How does the trend of change of fatal poisoning over the years compare to those of the other causes of death? (Sangwon)**
+**Q2 How does the trend of change of fatal poisoning over the years compare to those of the other causes of death? (Sangwon)**
 This question will reveal if there has been a consistent trend (i.e. decrease of fata poisoning over the years), and if so, how the rate of that change compares to the rate of other changes. This will represent if fatal poisoning has been a low or high priority for prevention compared to other causes of death.
 
-**How does the rate of fatal poisoning compare to the rates of the five leading causes of death in the excess death dataset? (Esha)**
+**Q3 How does the rate of fatal poisoning compare to the rates of the five leading causes of death in the excess death dataset? (Esha)**
 This question is of interest to us because by comparing the rates of fatal poisoning to the rates of the leading causes of death, we could potentially see whether or not there is some overlap in these categories. Therefore by adressing the country's problem of death from drug poisoning we could also lower the excess death rate. 
+
+**Q4 Which percentage of deaths to population (drug usage or heart disease) has seen a bigger increase between the years of 2005-2015? (Connor) **
+This question will provide us with a unique insight as to whether heart disease or drug usage has become an increasing problem in the past 10 years and will provide us with data that can be considered in policy implementation to help lower these numbers. *In this case, the past 10 years will be 2005-2015; the most recent data provided. 
 
 
 ## Section 2. Data Description
@@ -51,7 +52,7 @@ The two data sets that are being used in this report are *Drug Poisoning Mortali
 Glossary:  
 - State: The place where the data is collected from.      
 - Year: The year the data was collected.      
-- Age.Group: Splits up the data by ranges in age (65â???"74 for example would be those aged between 65 and 74).  
+- Age.Group: Splits up the data by ranges in age (65????"74 for example would be those aged between 65 and 74).  
 - Race.and.Hispanic.Origin: Organizes the data by race, using hispanic as the default race (Ex: non-hispanic black).  
 - Deaths: Drug related deaths.  
 - Population: Total population of the demographic.  
@@ -74,7 +75,6 @@ Glossary:
 - Potentially.Excessive.Deaths: Deaths that were statistically predicted to not occur that *did* occur in the given period.   
 - Percent.Potentially.Excessive.Deaths: The percent of Potentially.Excessive.Deaths over population.   
 *The full, raw data set can be downloaded [here](https://data.cdc.gov/api/views/vdpk-qzpr/rows.csv?accessType=DOWNLOAD).
-
 
 
 
@@ -104,6 +104,10 @@ By looking at the average rates of death from unintentional injury and poisoning
 **How does the trend of change of fatal poisoning over the years compare to those of the other causes of death?**
 
 Looking at the national total deaths for each cause over the years, it appears that deaths from fatal poisoning has increased at a comparatively higher rate compared to deaths from other causes.
+
+**How does the rate of fatal poisoning compare to the rates of the five leading causes of death in the excess death dataset?**
+
+When looking at the rate of increase from fatal poisoning in comparison to the increase in excess death throughout the 50 states it is apparent that fatal poisoning has had a higher rate that the other five leading causes. 
 
 ### Comparison between features of the two data sets
 *Comparing average rate of excess deaths per year and average rate of death by drug poisoning*
@@ -139,6 +143,12 @@ A line graph would be effective in displaying the correlation between death from
 
 A line graph showing the rates or changes in rates of death from each cause would be effective in showing how the trend for each cause of death over the years, especially drug poisoning compared to other causes.
 
+<<<<<<< HEAD
 ![*proposed data visualization for Q4*](visuals/connor_graph.png) 
 
 A line graph will allow for an easy visualization of the change in death number for excessive and drug over the fifteen year period. The greater change in deaths can be observed from the larger vertical distance, which will be the key to answering this question. 
+
+![*proposed data visualization for Q4*](visuals/graph_q4.jpg)
+
+A line graph showing the increase in death in average for the five leading causes vs. the average rate of death from fatal poisoning would be the most effective because it would show how their trends and how they relate to one another. 
+
