@@ -152,4 +152,21 @@ sorted_excess_death_data <- select(excess_death_data, Year, Cause.of.Death, Stat
                                    Benchmark, Locality, Observed.Deaths, Population, Expected.Deaths,
                                    Potentially.Excess.Deaths, Percent.Potentially.Excess.Deaths)  
 
+##############################################
+# Analysis for section 3.3(Connor's question)#
+##############################################
+excess_death_sort_by_year <- group_by(sorted_excess_death_data, Year)
+excess_death_sort_by_year <- filter(excess_death_sort_by_year, Benchmark == "Floating")
+excess_death_sort_by_year_2005 <- filter(excess_death_sort_by_year, Year == 2005)
+excess_death_sort_by_year_2015 <- filter(excess_death_sort_by_year, Year == 2015)
+excess_death_sort_by_year_2005 <- na.omit(select(excess_death_sort_by_year_2005, Year, Potentially.Excess.Deaths))
+five_excessive_death_mean <- mean(excess_death_sort_by_year_2005$Potentially.Excess.Deaths)                                
+excess_death_sort_by_year_2015 <- na.omit(select(excess_death_sort_by_year_2015, Year, Potentially.Excess.Deaths))
+fifteen_excessive_death_mean <- mean(excess_death_sort_by_year_2015$Potentially.Excess.Deaths)
+ten_year_difference_in_excessive_deaths <- fifteen_excessive_death_mean - five_excessive_death_mean
 
+drug_sort_by_year_five <- filter(sorted_drug_data, Year == 2005)
+drug_sort_by_year_fifteen <- filter(sorted_drug_data, Year == 2015)
+drug_five_mean <- na.omit(mean(drug_sort_by_year_five$Deaths))
+drug_fifteen_mean <- na.omit(mean(drug_sort_by_year_fifteen$Deaths))
+ten_year_difference_in_drug_deaths <- drug_fifteen_mean - drug_five_mean

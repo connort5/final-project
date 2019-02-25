@@ -95,6 +95,8 @@ kable(summarized_drug_poisoning)
 
 ### High Level Answers to Questions
 
+**Which percentage of deaths to population (drug usage or heart disease) has seen a bigger increase between the years of 2005-2015?** 
+ By taking the average number of potentially excess deaths from the year 2005 and comparing it to the 2015 average, there is an increase in the number of potentially excessive deaths. Similarily, there is also an increase between the years 2005-2015 in the average amount of drug poisoning. However, the average increase in drug poisoning deaths is far greater than potentially excess deaths, suggesting that funds, policies, etc. should focus on solving the drug crisis rather then providing additional medical care to non-metropolitan areas.   
 **How are the rates of unintentional injury related to the rates of fatal poisoning in the United States from 2005-2015?**
 
 By looking at the average rates of death from unintentional injury and poisoning per year, we can see a general trend that when the average rate of unintentional injury goes up, the average rate of poisoning also goes up.
@@ -127,6 +129,8 @@ kable(highest_avg)
 
 ## Section 4. Proposed Data Presentation
 
+
+
 ![*proposed data visualization for Q1*](visuals/graph_q1.jpg)
 
 A line graph would be effective in displaying the correlation between death from unintentional injury and poisoning because you can see how closely the trends of the two lines relate over time. Looking to see if the lines move the same direction over time will show how closely related the two are. 
@@ -134,3 +138,7 @@ A line graph would be effective in displaying the correlation between death from
 ![*proposed data visualization for Q2*](visuals/graph_q2.jpg)
 
 A line graph showing the rates or changes in rates of death from each cause would be effective in showing how the trend for each cause of death over the years, especially drug poisoning compared to other causes.
+
+![*proposed data visualization for Q4*](visuals/connor_graph.png) 
+
+A line graph will allow for an easy visualization of the change in death number for excessive and drug over the fifteen year period. The greater change in deaths can be observed from the larger vertical distance, which will be the key to answering this question. 
