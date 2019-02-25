@@ -98,6 +98,6 @@ A line graph would be effective in displaying the correlation between death from
 
 A line graph showing the rates or changes in rates of death from each cause would be effective in showing how the trend for each cause of death over the years, especially drug poisoning compared to other causes.
 
-![*proposed data visualization for Q3*]
+![*proposed data visualization for Q4*](visuals/graph_q4.jpg)
 
 A line graph showing the increase in death in average for the five leading causes vs. the average rate of death from fatal poisoning would be the most effective because it would show how their trends and how they relate to one another. 
