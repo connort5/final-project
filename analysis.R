@@ -56,3 +56,85 @@ summarize_drug_poisoning <- function(df){
     max_population = max(Population)
   )
 }
+###########################
+## Analysis for Questions##
+##    (very general)     ##
+###########################
+
+# High level analysis for Q1
+unintentional_death_rates <- excess_deaths %>% 
+  filter(Cause.of.Death == "Unintentional Injury") %>% 
+  filter(Age.Range == "0-84") %>% 
+  select(Year, Observed.Deaths, Population) %>% 
+  mutate(percent_death = Observed.Deaths / Population) %>% 
+  group_by(Year) %>% 
+  summarise(mean_death = mean(percent_death, na.rm = TRUE))
+
+poisoning_deaths <- drug_poisoning %>% 
+  filter(
+    Age.Group == "All Ages",
+    Sex == "Both Sexes",
+    Race.and.Hispanic.Origin == "All Races-All Origins"
+    ) %>% 
+  select(Year, Deaths, Population) %>% 
+  mutate(percent_death = Deaths / Population) %>% 
+  group_by(Year) %>% 
+  summarise(mean_death = mean(percent_death, na.rm = TRUE))
+
+##############
+# Comparison #
+##############
+# comparing average rate of excess deaths per year and average rate of death by drug poisoning
+
+# average rate of excess deaths per year
+excess_death_rate <- excess_deaths %>% 
+  filter(
+    Age.Range == "0-84",
+    Locality == "All", 
+    Benchmark == "Floating"
+  ) %>% 
+  select(Year, Percent.Potentially.Excess.Deaths) %>% 
+  group_by(Year) %>% 
+  summarise(avg_percent_excess_deaths = mean(Percent.Potentially.Excess.Deaths))
+
+# average rate of drug poisoning deaths per year, already calculated in High level analysis for Q1
+
+######################
+## Joining Datasets ##
+######################
+
+#finding which state has the highest combined rate of excess death and drug poisoning
+
+avg_excess <- excess_deaths %>% 
+  filter(
+    Age.Range == "0-84",
+    Locality == "All", 
+    Benchmark == "Floating"
+  ) %>% 
+  select(State, Percent.Potentially.Excess.Deaths) %>% 
+  group_by(State) %>% 
+  summarise(avg_excess_percent = mean(Percent.Potentially.Excess.Deaths))
+
+avg_poison <- drug_poisoning %>% 
+  filter(
+    Age.Group == "All Ages",
+    Sex == "Both Sexes",
+    Race.and.Hispanic.Origin == "All Races-All Origins"
+  ) %>% 
+  select(State, Deaths, Population) %>% 
+  mutate(percent_death = (Deaths / Population) * 100) %>% 
+  group_by(State) %>% 
+  summarise(avg_poison_rate = mean(percent_death))
+
+avg_excess_poison <- left_join(avg_excess, avg_poison, by = "State")
+avg_excess_poison$avg_excess_percent <- as.numeric(avg_excess_poison$avg_excess_percent)
+avg_excess_poison$avg_poison_rate <- as.numeric(avg_excess_poison$avg_poison_rate)
+View(avg_excess_poison)
+  
+highest_avg <- avg_excess_poison %>% 
+  mutate(combined_rates = (avg_excess_percent + avg_poison_rate)) %>% 
+  filter(complete.cases(.)) %>% 
+  filter(combined_rates == max(combined_rates))
+  
+
+  

@@ -43,6 +43,34 @@ kable(summarized_excess_deaths)
 kable(summarized_drug_poisoning)
 ```
 
+### High Level Answers to Questions
+
+**How are the rates of unintentional injury related to the rates of fatal poisoning in the United States from 2005-2015**
+
+By looking at the average rates of death from unintentional injury and poisoning per year, we can see a general trend that when the average rate of unintentional injury goes up, the average rate of poisoning also goes up 
+
+### Comparison between features of the two data sets
+*Comparing average rate of excess deaths per year and average rate of death by drug poisoning*
+
+```{r comparison, echo = FALSE}
+kable(excess_death_rate)
+
+kable(poisoning_deaths)
+```
+
+When looking at these two tables, we can see that the average rates of excess deaths are far greater than that of the rates from drug poisoning, which is expected, since the excess deaths are from the top five causes of the death in the United States. When comparing the fluctuations of the rates between years, we can see that they fluctuate together (rate rises or declines together) only about half the time from the data prvoided (2005-2015).
+
+### Analysis with Combined Data
+*finding which state has the highest combined rate of excess death and drug poisoning*
+
+After analysis of joining the two data sets, we found that the state with the highest combined percentage of excess deaths and drug poisoning deaths was Mississippi. 
+
+``` {r highest_rate_state, echo = FALSE}
+kable(highest_avg)
+```
+
+
+
 ## Section 4. Proposed Data Presentation
 
 ![*proposed data visualization for Q1*](graph_q1.jpg)

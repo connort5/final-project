@@ -1183,6 +1183,175 @@ $(document).ready(function () {
 </tr>
 </tbody>
 </table>
+<div id="high-level-answers-to-questions" class="section level3">
+<h3>High Level Answers to Questions</h3>
+<p><strong>How are the rates of unintentional injury related to the rates of fatal poisoning in the United States from 2005-2015</strong></p>
+<p>By looking at the average rates of death from unintentional injury and poisoning per year, we can see a general trend that when the average rate of unintentional injury goes up, the average rate of poisoning also goes up</p>
+</div>
+<div id="comparison-between-features-of-the-two-data-sets" class="section level3">
+<h3>Comparison between features of the two data sets</h3>
+<p><em>Comparing average rate of excess deaths per year and average rate of death by drug poisoning</em></p>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Year</th>
+<th align="right">avg_percent_excess_deaths</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">2005</td>
+<td align="right">31.27808</td>
+</tr>
+<tr class="even">
+<td align="right">2006</td>
+<td align="right">29.98000</td>
+</tr>
+<tr class="odd">
+<td align="right">2007</td>
+<td align="right">30.08462</td>
+</tr>
+<tr class="even">
+<td align="right">2008</td>
+<td align="right">31.14885</td>
+</tr>
+<tr class="odd">
+<td align="right">2009</td>
+<td align="right">31.27692</td>
+</tr>
+<tr class="even">
+<td align="right">2010</td>
+<td align="right">32.17500</td>
+</tr>
+<tr class="odd">
+<td align="right">2011</td>
+<td align="right">32.98462</td>
+</tr>
+<tr class="even">
+<td align="right">2012</td>
+<td align="right">32.29154</td>
+</tr>
+<tr class="odd">
+<td align="right">2013</td>
+<td align="right">32.33769</td>
+</tr>
+<tr class="even">
+<td align="right">2014</td>
+<td align="right">31.60923</td>
+</tr>
+<tr class="odd">
+<td align="right">2015</td>
+<td align="right">32.66154</td>
+</tr>
+</tbody>
+</table>
+<table>
+<thead>
+<tr class="header">
+<th align="right">Year</th>
+<th align="right">mean_death</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="right">1999</td>
+<td align="right">0.0000579</td>
+</tr>
+<tr class="even">
+<td align="right">2000</td>
+<td align="right">0.0000634</td>
+</tr>
+<tr class="odd">
+<td align="right">2001</td>
+<td align="right">0.0000728</td>
+</tr>
+<tr class="even">
+<td align="right">2002</td>
+<td align="right">0.0000834</td>
+</tr>
+<tr class="odd">
+<td align="right">2003</td>
+<td align="right">0.0000938</td>
+</tr>
+<tr class="even">
+<td align="right">2004</td>
+<td align="right">0.0000973</td>
+</tr>
+<tr class="odd">
+<td align="right">2005</td>
+<td align="right">0.0001035</td>
+</tr>
+<tr class="even">
+<td align="right">2006</td>
+<td align="right">0.0001186</td>
+</tr>
+<tr class="odd">
+<td align="right">2007</td>
+<td align="right">0.0001228</td>
+</tr>
+<tr class="even">
+<td align="right">2008</td>
+<td align="right">0.0001260</td>
+</tr>
+<tr class="odd">
+<td align="right">2009</td>
+<td align="right">0.0001235</td>
+</tr>
+<tr class="even">
+<td align="right">2010</td>
+<td align="right">0.0001292</td>
+</tr>
+<tr class="odd">
+<td align="right">2011</td>
+<td align="right">0.0001405</td>
+</tr>
+<tr class="even">
+<td align="right">2012</td>
+<td align="right">0.0001389</td>
+</tr>
+<tr class="odd">
+<td align="right">2013</td>
+<td align="right">0.0001473</td>
+</tr>
+<tr class="even">
+<td align="right">2014</td>
+<td align="right">0.0001580</td>
+</tr>
+<tr class="odd">
+<td align="right">2015</td>
+<td align="right">0.0001745</td>
+</tr>
+<tr class="even">
+<td align="right">2016</td>
+<td align="right">0.0002077</td>
+</tr>
+</tbody>
+</table>
+<p>When looking at these two tables, we can see that the average rates of excess deaths are far greater than that of the rates from drug poisoning, which is expected, since the excess deaths are from the top five causes of the death in the United States. When comparing the fluctuations of the rates between years, we can see that they fluctuate together (rate rises or declines together) only about half the time from the data prvoided (2005-2015).</p>
+</div>
+<div id="analysis-with-combined-data" class="section level3">
+<h3>Analysis with Combined Data</h3>
+<p><em>finding which state has the highest combined rate of excess death and drug poisoning</em></p>
+<p>After analysis of joining the two data sets, we found that the state with the highest combined percentage of excess deaths and drug poisoning deaths was Mississippi.</p>
+<table>
+<thead>
+<tr class="header">
+<th align="left">State</th>
+<th align="right">avg_excess_percent</th>
+<th align="right">avg_poison_rate</th>
+<th align="right">combined_rates</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td align="left">Mississippi</td>
+<td align="right">50.85818</td>
+<td align="right">0.0090876</td>
+<td align="right">50.86727</td>
+</tr>
+</tbody>
+</table>
+</div>
 </div>
 <div id="section-4.-proposed-data-presentation" class="section level2">
 <h2>Section 4. Proposed Data Presentation</h2>
