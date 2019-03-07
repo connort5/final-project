@@ -69,6 +69,7 @@ unintentional_death_rates <- excess_deaths %>%
   mutate(percent_death = Observed.Deaths / Population) %>% 
   group_by(Year) %>% 
   summarise(mean_death = mean(percent_death, na.rm = TRUE))
+View(unintentional_death_rates)
 
 poisoning_deaths <- drug_poisoning %>% 
   filter(
