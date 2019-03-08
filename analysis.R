@@ -3,9 +3,11 @@
 # This file is named "analysis.R"
 
 library(dplyr)
+library(quantreg)
 
 excess_deaths <- read.csv("data/excess_deaths.csv", stringsAsFactors = FALSE)
 drug_poisoning <- read.csv("data/drug_poisoning.csv", stringsAsFactors = FALSE)
+
 
 # Dropping unused columns
 filter_excess_deaths <- function(df){
@@ -57,30 +59,35 @@ summarize_drug_poisoning <- function(df){
 
 
 ###########################
-## Analysis for Questions##
-##    (very general)     ##
+###  Analysis for Jamie ###
 ###########################
 
-# High level analysis for Q1
 unintentional_death_rates <- excess_deaths %>% 
   filter(Cause.of.Death == "Unintentional Injury") %>% 
   filter(Age.Range == "0-84") %>% 
   select(Year, Observed.Deaths, Population) %>% 
   mutate(percent_death = Observed.Deaths / Population) %>% 
   group_by(Year) %>% 
-  summarise(mean_death = mean(percent_death, na.rm = TRUE))
-View(unintentional_death_rates)
+  summarise(mean_death_injury = mean(percent_death, na.rm = TRUE))
 
-poisoning_deaths <- drug_poisoning %>% 
+
+poisoning_2005_2015 <- drug_poisoning %>% 
   filter(
-    Age.Group == "All Ages",
+    Year == "2005" | 
+    Year == "2006" | 
+    Year == "2007" | 
+    Year == "2008" | 
+    Year == "2009" | 
+    Year == "2010" | 
+    Year == "2011" | 
+    Year == "2012" | 
+    Year == "2013" | 
+    Year == "2014" | 
+    Year == "2015",
     Sex == "Both Sexes",
     Race.and.Hispanic.Origin == "All Races-All Origins"
-    ) %>% 
-  select(Year, Deaths, Population) %>% 
-  mutate(percent_death = Deaths / Population) %>% 
-  group_by(Year) %>% 
-  summarise(mean_death = mean(percent_death, na.rm = TRUE))
+  )
+
 
 ##############
 # Comparison #

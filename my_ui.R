@@ -4,6 +4,17 @@ library("dplyr")
 library("tidyr")
 library("rsconnect")
 
+source("analysis.R")
+
+# Defining Variables to use in interactivity
+
+age_range_choices <- unique(drug_poisoning$Age.Group)
+
+
+
+
+
+# Start of defining UI
 my_ui <- fluidPage(
   
   includeCSS("style.css"),
@@ -23,11 +34,15 @@ my_ui <- fluidPage(
               
               tabPanel("Connor"),
               
-              tabPanel("Jamie", 
+              tabPanel("Injury and Poisoning", 
                        h3("How are the rates of unintentional injury related to the rates of fatal poisoning in the United States from 2005-2015?", class = "question"),
                        p("This question is of interest because by analyzing the unintentional death rates from injury and comparing them to rates of drug poisoning, 
                          we can understand how strongly drug use correlates with deaths from unintentional injury. It is known that drugs inhibit a person's judgement and coordination, 
-                         which may lead to injuries. We can analyze the data in the years that they overlap and compare the death rates from unintentional injury to poisoning.", class = "question")
+                         which may lead to injuries. We can analyze the data in the years that they overlap and compare the death rates from unintentional injury to poisoning.", class = "question"),
+                       selectInput(inputId = "age_range", label = "Age Range (for poisoning)", 
+                                   choices = age_range_choices, selected = "0-84"),
+                       plotOutput(outputId = "injury_poison_plot"),
+                       textOutput(outputId = "injury_poison_explaination")
                        
               ),
               

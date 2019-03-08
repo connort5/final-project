@@ -3,9 +3,11 @@
 @import url('https://fonts.googleapis.com/css?family=Raleway|Roboto');
 
 body {
-  background-color: #bdd3d2;
-  color: #3c2e2e;
+  background-color: #afd5d8;
+  color: #464365;
   font-family: Roboto, Helvetica, sans-serif;
+  margin-left: 10pt;
+  margin-right: 10pt;
 }
 
 h2 {
@@ -31,12 +33,38 @@ h3 {
   padding-right: 70pt;
   padding-top: 30pt;
   padding-bottom: 30pt;
-  background-color: rgba(255, 255, 255, 0.5);
+  background-color: rgba(255, 255, 255, 0.4);
   border: 1pt;
-  border-color: #3c2e2e;
+  border-color: #464365;
 }
 
 .question {
+  margin-left: 10pt;
+  margin-right: 10pt;
+  margin-top: 10pt;
+  padding-left: 20pt;
+  padding-right: 20pt;
+  padding-top: 10pt;
+  padding-bottom: 10pt;
+}
+
+.control-label {
+  font-weight: bolder;
+}
+
+.selectize-input {
+  border-radius: 15pt;
+}
+
+.selectize-dropdown {
+  border-radius: 15pt;
+}
+
+#injury_poison_plot {
+  margin: 10pt;
+}
+
+#injury_poison_explaination {
   margin-left: 10pt;
   margin-right: 10pt;
   margin-top: 10pt;
