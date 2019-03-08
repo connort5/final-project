@@ -1,3 +1,3 @@
-# a6 - Collaboration
-This repo contains R code for generating a report about data sets that will be used in a final project, 
-created as part of an assignment for the _Technical Foundations of Informatics_ course at the UW iSchool.
+# FINAL PROJECT
+This repo contains the code for making the shiny app that is our final project. The starter code was
+imported from the previous work done on a6.
