@@ -32,7 +32,9 @@ my_ui <- fluidPage(
               
               tabPanel("Sangwon"),
               
-              tabPanel("Connor"),
+              tabPanel("Connor", 
+                       sliderInput(inputId = "slide_key", label = "Pick a Year(s)", min = 1992, max = 2016, value = c(1992, 2016))
+                       ),
               
               tabPanel("Injury and Poisoning", 
                        h3("How are the rates of unintentional injury related to the rates of fatal poisoning in the United States from 2005-2015?", class = "question"),

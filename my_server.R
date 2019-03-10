@@ -42,5 +42,9 @@ my_server <- function(input, output) {
           be explained by the fact that these age groups are more likely to have somone watching or caring for them.")
   })
   
-  
+  ############
+  ## Connor ##
+  ############
+  output$connor_plot <- renderPlot({
+  })
 }
