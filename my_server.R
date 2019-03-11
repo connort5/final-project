@@ -68,7 +68,7 @@ my_server <- function(input, output) {
    
      ggplot() + 
       geom_polygon(data = combined_data_with_states, aes(x = long, y = lat, group = group, fill = bigger_drug_increase))+ 
-      scale_fill_manual(name = "Bong", labels = c("TRUE" = "Drugs", "FALSE" = "Cancer"), values = c("TRUE" = "blueviolet", "FALSE" = "pink"))+
+      scale_fill_manual(name = "Legend", labels = c("TRUE" = "Drugs", "FALSE" = "Cancer"), values = c("TRUE" = "blueviolet", "FALSE" = "pink"))+
       coord_quickmap()
   })
 }
