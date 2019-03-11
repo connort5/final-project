@@ -3,13 +3,14 @@ library("ggplot2")
 library("dplyr")
 library("tidyr")
 library("rsconnect")
+library("maps")
 
 source("analysis.R")
 
 # Defining Variables to use in interactivity
 
 age_range_choices <- unique(drug_poisoning$Age.Group)
-
+united_states_data <- map_data("state")
 
 
 
@@ -32,8 +33,12 @@ my_ui <- fluidPage(
               
               tabPanel("Sangwon"),
               
-              tabPanel("Connor", 
-                       sliderInput(inputId = "slide_key", label = "Pick a Year(s)", min = 1992, max = 2016, value = c(1992, 2016))
+              tabPanel("Cancer & Drug Overdose", 
+                       h3("Which percentage of deaths to population (drug overdose or potentially excess deaths due to cancer) has seen a bigger increase between the years of 2005-2015 in the United States?"), 
+                       p("By comparing the rates of deaths caused by drug overdoses and potentially excess deaths due to cancer, it is apparent that cancer is responsible for more deaths yearly in the United States. However, when we compare the percent change of drug overdoses to the percent change in potentially excess deaths due to cancer over time, the results are surprising. Law makers could use this information to assist in making decisions about what measures could be taken to save the most lives. "),
+                       sliderInput(inputId = "slide_key", label = "Pick a Year Range", min = 2005, max = 2015, value = c(2005, 2015)), 
+                       plotOutput(outputId = "connor_plot"), 
+                       p("The map seen above allows the user to pick a range of years, and the states that saw a bigger percent increase in drug overdoses are seen in purple, while the states that appear in pink represent a greater percent increase in potentially excess deaths due to cancer. As you can see in the 2005-2015 data range, all but three of the states saw a higher percent increase in deaths due to drug overdose. This information suggests that drug overdoses have become a greater problem over time compared to potentially excess deaths due to cancer. However, although it seems that drug overdoses are drastically more deadly then potentially excess deaths due to cancer, it is important to keep in mind that the data is based off of percent change. In reality, the number of deaths due to cancer annually far surpasses the amount of drug overdose deaths, but nontheless, lawmakers could find this information useful when addressing drug control policy.  ")
                        ),
               
               tabPanel("Injury and Poisoning", 
