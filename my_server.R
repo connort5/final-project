@@ -47,4 +47,10 @@ my_server <- function(input, output) {
   ############
   output$connor_plot <- renderPlot({
   })
+  
+  #############
+  ## Sangwon ##
+  #############
+  
+  
 }
