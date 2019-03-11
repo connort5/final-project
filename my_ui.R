@@ -4,6 +4,7 @@ library("dplyr")
 library("tidyr")
 library("rsconnect")
 library("maps")
+library("stringr")
 
 source("analysis.R")
 
@@ -11,8 +12,6 @@ source("analysis.R")
 
 age_range_choices <- unique(drug_poisoning$Age.Group)
 united_states_data <- map_data("state")
-
-
 
 
 # Start of defining UI

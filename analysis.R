@@ -8,6 +8,9 @@ library(quantreg)
 excess_deaths <- read.csv("data/excess_deaths.csv", stringsAsFactors = FALSE)
 drug_poisoning <- read.csv("data/drug_poisoning.csv", stringsAsFactors = FALSE)
 
+# replacing em dash with hyphen in the drug poisoning for OS compatibility
+drug_poisoning$Age.Group <- str_replace(drug_poisoning$Age.Group, "–", "-")
+
 
 # Dropping unused columns
 filter_excess_deaths <- function(df){
