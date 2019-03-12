@@ -30,9 +30,12 @@ my_ui <- fluidPage(
                        Excess deaths are definied as \"deaths that exceed the numbers that would be expected if the death rates of states with the lowest rates (benchmarks) occurred across all states.\" [data.gov](https://catalog.data.gov/dataset/nchs-potentially-excess-deaths-from-the-five-leading-causes-of-death) The five leading causes of death in this dataset are: Cancer, Chronic Lower Respiratory Disease, Stroke, Heart Disease, and Unintentional Injury.", class = "intro")
               ),
               
-              tabPanel("Sangwon",
-                       h3("How does the trend of change of fatal poisoning over the years compare to those of the other causes of death?"),
-                       p("This question will reveal if there has been a consistent trend (i.e. decrease of fata poisoning over the years), and if so, how the rate of that change compares to the rate of other changes. This will represent if fatal poisoning has been a low or high priority for prevention compared to other causes of death.")
+              tabPanel("Chronic Lower Respiratory Disease",
+                       h3(),
+                       p(),
+                       sliderInput(),
+                       plotOutput(outputId = "CLRD_poison_plot"),
+                       p()
               ),
               
               tabPanel("Cancer & Drug Overdose", 

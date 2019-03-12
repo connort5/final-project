@@ -76,5 +76,12 @@ my_server <- function(input, output) {
   ## Sangwon ##
   #############
   
-  
+  output$CLRD_poison_plot <- renderPlot({
+    
+    filtered_CLRD <- filter_excess_deaths(excess_deaths) %>%
+      filter(Cause.of.Death == "Chronic Lower Respiratory Disease")
+    
+    filtered_drug_poisoning <- filter_drug_poisoning(drug_poisoning) %>%
+      filter(Year >= 2005, Year <= 2015)
+  })
 }
