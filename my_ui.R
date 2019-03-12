@@ -30,13 +30,19 @@ my_ui <- fluidPage(
                        Excess deaths are definied as \"deaths that exceed the numbers that would be expected if the death rates of states with the lowest rates (benchmarks) occurred across all states.\" [data.gov](https://catalog.data.gov/dataset/nchs-potentially-excess-deaths-from-the-five-leading-causes-of-death) The five leading causes of death in this dataset are: Cancer, Chronic Lower Respiratory Disease, Stroke, Heart Disease, and Unintentional Injury.", class = "intro")
               ),
               
-              tabPanel("Chronic Lower Respiratory Disease",
+              tabPanel("Comparison to Poisoning",
                        h3("How does fatal poisoning correlate to other causes of death?"),
-                       p("This question"),
+                       p("This question can lead to a high-level analysis of the possible relationships between the rate of fatal poisoning and other causes of death.
+                         A general knowledge of how high or low rates of death from fatal poisoning, as well as their increase or decrease, could reveal intriguing results
+                         that can point out the direction for further analysis."),
                        radioButtons(inputId = "cause_select", label = "Compare deaths from drug poisoning to deaths from:",
                                     choices = c("chronic_lower_respiratory_disease", "stroke", "unintentional_injury")),
                        plotOutput(outputId = "CLRD_poison_plot"),
-                       p("The plot")
+                       p("The plot above compares death rates between fatal poisoning and a selected cause of death. Initial analysis suggests that fatal poisoning has a positive correlation
+                         to chronic lower respiratory disease and unintentional injury. However, because this is a high-level analysis that ignores time and region, it requires further inquiry
+                         considering those and potentially other factors to confirm and develop those conclusions. In a similar manner, the pattern seen in the comparison to deaths from stroke
+                         may suggest a particular type of correlation that is not always positive like with the other two comparisons. Deeper analysis could reveal what this correlation actually is, 
+                         if there is one at all.")
               ),
               
               tabPanel("Cancer & Drug Overdose", 
