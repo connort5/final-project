@@ -36,7 +36,7 @@ my_ui <- fluidPage(
                          A general knowledge of how high or low rates of death from fatal poisoning, as well as their increase or decrease, could reveal intriguing results
                          that can point out the direction for further analysis."),
                        radioButtons(inputId = "cause_select", label = "Compare deaths from drug poisoning to deaths from:",
-                                    choices = c("chronic_lower_respiratory_disease", "stroke", "unintentional_injury")),
+                                    choices = c("Cancer", "Chronic_Lower_Respiratory_Disease", "Heart_Disease", "Stroke", "Unintentional_Injury")),
                        plotOutput(outputId = "CLRD_poison_plot"),
                        p("The plot above compares death rates between fatal poisoning and a selected cause of death. Initial analysis suggests that fatal poisoning has a positive correlation
                          to chronic lower respiratory disease and unintentional injury. However, because this is a high-level analysis that ignores time and region, it requires further inquiry

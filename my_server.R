@@ -92,14 +92,15 @@ my_server <- function(input, output) {
         key = Cause.of.Death,
         value = Deaths
       ) %>%
-      select(-"Cancer", -"Heart Disease") %>%
+      # select(-"Cancer", -"Heart Disease") %>%
       left_join(filtered_drug_poisoning, by = "Year") %>%
       ungroup(Year)
     
-    colnames(filtered_CLRD) <- c("year", "chronic_lower_respiratory_disease", "stroke", "unintentional_injury", "drug_poisoning")
+    colnames(filtered_CLRD) <- c("Year", "Cancer", "Chronic_Lower_Respiratory_Disease", "Heart_Disease", "Stroke", "Unintentional_Injury", "Drug_Poisoning")
     
     death_plot <- ggplot(data = filtered_CLRD) +
-      geom_point(mapping = aes_string(x = "drug_poisoning", y = input$cause_select))
+      geom_point(mapping = aes_string(x = "Drug_Poisoning", y = input$cause_select)) +
+      labs(title = "Deaths by Poisoning vs. Deaths by Other Causes", x = "Deaths by Poisoning", y = paste("Deaths by", str_replace(input$cause_select, "_", " ")))
     
     death_plot
   })
