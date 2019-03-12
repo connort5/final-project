@@ -31,11 +31,12 @@ my_ui <- fluidPage(
               ),
               
               tabPanel("Chronic Lower Respiratory Disease",
-                       h3(),
-                       p(),
-                       sliderInput(inputId = "year_input", label = "Pick a Year Range", min = 2005, max = 2005, value = c(2005, 2015)),
+                       h3("How does fatal poisoning correlate to other causes of death?"),
+                       p("This question"),
+                       radioButtons(inputId = "cause_select", label = "Compare deaths from drug poisoning to deaths from:",
+                                    choices = c("chronic_lower_respiratory_disease", "stroke", "unintentional_injury")),
                        plotOutput(outputId = "CLRD_poison_plot"),
-                       p()
+                       p("The plot")
               ),
               
               tabPanel("Cancer & Drug Overdose", 
