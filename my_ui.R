@@ -33,7 +33,7 @@ my_ui <- fluidPage(
               tabPanel("Chronic Lower Respiratory Disease",
                        h3(),
                        p(),
-                       sliderInput(),
+                       sliderInput(inputId = "year_input", label = "Pick a Year Range", min = 2005, max = 2005, value = c(2005, 2015)),
                        plotOutput(outputId = "CLRD_poison_plot"),
                        p()
               ),

@@ -78,10 +78,25 @@ my_server <- function(input, output) {
   
   output$CLRD_poison_plot <- renderPlot({
     
-    filtered_CLRD <- filter_excess_deaths(excess_deaths) %>%
-      filter(Cause.of.Death == "Chronic Lower Respiratory Disease")
-    
     filtered_drug_poisoning <- filter_drug_poisoning(drug_poisoning) %>%
-      filter(Year >= 2005, Year <= 2015)
+      filter(Year >= 2005, Year <= 2015) %>%
+      select(Year, Deaths) %>%
+      group_by(Year) %>%
+      summarize("Drug Poisoning" = sum(Deaths))
+    
+    filtered_CLRD <- filter_excess_deaths(excess_deaths) %>%
+      select(Year, Cause.of.Death, Observed.Deaths) %>%
+      group_by(Year, Cause.of.Death) %>%
+      summarize(Deaths = sum(Observed.Deaths)) %>%
+      spread(
+        key = Cause.of.Death,
+        value = Deaths
+      ) %>%
+      select(-"Cancer", -"Heart Disease") %>%
+      left_join(filtered_drug_poisoning, by = "Year")
+    
+    death_plot <- ggplot(data = filtered_CLRD) +
+      geom_point(mapping = aes(x = "Drug Poisoning", y = "Stroke"))
+    
   })
 }
