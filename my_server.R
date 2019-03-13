@@ -104,4 +104,106 @@ my_server <- function(input, output) {
     
     death_plot
   })
+
+#############
+## Sangwon ##
+#############
+
+output$CLRD_poison_plot <- renderPlot({
+  
+  filtered_drug_poisoning <- filter_drug_poisoning(drug_poisoning) %>%
+    filter(Year >= 2005, Year <= 2015) %>%
+    select(Year, Deaths) %>%
+    group_by(Year) %>%
+    summarize("Drug Poisoning" = sum(Deaths))
+  
+  filtered_CLRD <- filter_excess_deaths(excess_deaths) %>%
+    select(Year, Cause.of.Death, Observed.Deaths) %>%
+    group_by(Year, Cause.of.Death) %>%
+    summarize(Deaths = sum(Observed.Deaths)) %>%
+    spread(
+      key = Cause.of.Death,
+      value = Deaths
+    ) %>%
+    # select(-"Cancer", -"Heart Disease") %>%
+    left_join(filtered_drug_poisoning, by = "Year") %>%
+    ungroup(Year)
+  
+  colnames(filtered_CLRD) <- c("Year", "Cancer", "Chronic_Lower_Respiratory_Disease", "Heart_Disease", "Stroke", "Unintentional_Injury", "Drug_Poisoning")
+  
+  death_plot <- ggplot(data = filtered_CLRD) +
+    geom_point(mapping = aes_string(x = "Drug_Poisoning", y = input$cause_select)) +
+    labs(title = "Deaths by Poisoning vs. Deaths by Other Causes", x = "Deaths by Poisoning", y = paste("Deaths by", str_replace(input$cause_select, "_", " ")))
+  
+  death_plot
+})
+#############
+## Sangwon ##
+#############
+
+output$CLRD_poison_plot <- renderPlot({
+  
+  filtered_drug_poisoning <- filter_drug_poisoning(drug_poisoning) %>%
+    filter(Year >= 2005, Year <= 2015) %>%
+    select(Year, Deaths) %>%
+    group_by(Year) %>%
+    summarize("Drug Poisoning" = sum(Deaths))
+  
+  filtered_CLRD <- filter_excess_deaths(excess_deaths) %>%
+    select(Year, Cause.of.Death, Observed.Deaths) %>%
+    group_by(Year, Cause.of.Death) %>%
+    summarize(Deaths = sum(Observed.Deaths)) %>%
+    spread(
+      key = Cause.of.Death,
+      value = Deaths
+    ) %>%
+    # select(-"Cancer", -"Heart Disease") %>%
+    left_join(filtered_drug_poisoning, by = "Year") %>%
+    ungroup(Year)
+  
+  colnames(filtered_CLRD) <- c("Year", "Cancer", "Chronic_Lower_Respiratory_Disease", "Heart_Disease", "Stroke", "Unintentional_Injury", "Drug_Poisoning")
+  
+  death_plot <- ggplot(data = filtered_CLRD) +
+    geom_point(mapping = aes_string(x = "Drug_Poisoning", y = input$cause_select)) +
+    labs(title = "Deaths by Poisoning vs. Deaths by Other Causes", x = "Deaths by Poisoning", y = paste("Deaths by", str_replace(input$cause_select, "_", " ")))
+  
+  death_plot
+})
+
+##########
+## Esha ##
+##########
+
+  output$Cancer_plot <- renderPlot({
+    
+    filtered_drug_poisoning <- filter_drug_poisoning(drug_poisoning) %>%
+      filter(Year >= 2005, Year <= 2015) %>%
+      select(Year, Deaths) %>%
+      group_by(Year) %>%
+      summarize("Drug Poisoning" = sum(Deaths))
+    
+    filtered_CLRD <- filter_excess_deaths(excess_deaths) %>%
+      select(Year, Cause.of.Death, Observed.Deaths) %>%
+      group_by(Year, Cause.of.Death) %>%
+      summarize(Deaths = sum(Observed.Deaths)) %>%
+      spread(
+        key = Cause.of.Death,
+        value = Deaths
+      ) %>%
+      # select(-"Cancer", -"Heart Disease") %>%
+      left_join(filtered_drug_poisoning, by = "Year") %>%
+      ungroup(Year)
+    
+    colnames(filtered_CLRD) <- c("Year", "Cancer")
+    
+    death_plot <- ggplot(data = filtered_CLRD) +
+      geom_point(mapping = aes_string(x = "Drug_Poisoning", y = input$cause_select)) +
+      labs(title = "Deaths by Poisoning vs. Deaths by Other Causes", x = "Deaths by Poisoning", y = paste("Deaths by", str_replace(input$cause_select, "_", " ")))
+    
+    death_plot
+  })
+  
+  output$explaination <- renderText({
+    paste("The plot above compares the death rate from Fatal Poisoning to the leading cause of death, which is Cancer.")
+  })
 }

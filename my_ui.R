@@ -72,23 +72,19 @@ my_ui <- fluidPage(
                        
               ),
               
-              tabPanel("Fatal Poisoning vs.Leading Causes of Death", 
+              tabPanel("Fatal Poisoning vs.Cancer", 
                        h3("How does the rate of fatal poisoning compare to the rates of the five leading causes of death in the excess death dataset?", class = "question"),
                        p("This question is of interest to us because when looking at the rate of fatal poisoning in comparison to the leading five causes of death, our ability to
                          see a correlation between the two will also allow us to understand what course of treatment we could take for both issues and whether or not they could potentially 
                          overlap with one another. We can analyze the data throughout the ten years that they overlap with one another and compare them to one another to see if they correlate.
                          It is important to keep in mind that some of the leading of causes of death may not correlate to datal poisoning and vice versa.", class = "question"),
-                       radioButtons(inputId = "cause_select", label = "Death from fatal poisoning versus leading cause of death (Cancer):",
-                                    choice = c("Cancer")),
-                       plotOutput(outputId = "CLRD_poison_plot"),
-                       radioButtons(inputId = "Cancer", label = "Death from fatal poisoning versus leading cause of death (Cancer):",
-                                    choice = c("Cancer"),
-                       plotOutput(outputId = "cancer_plot"),
-                       p("The plot above compares the death rate from Fatal Poisoning to the leading cause of death, which is Cancer.")
-                      )
+                      radioButtons(inputId = "Cancer", label = "Death from fatal poisoning versus leading cause of death (Cancer):",
+                                   choices = "Cancer"),
+                      plotOutput(outputId = "Cancer_plot"),
+                      textOutput(outputId = "explaination")
+                    )
     )
   )
-)
 
 
 
