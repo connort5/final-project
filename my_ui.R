@@ -81,9 +81,14 @@ my_ui <- fluidPage(
                        radioButtons(inputId = "cause_select", label = "Death from fatal poisoning versus leading cause of death (Cancer):",
                                     choice = c("Cancer")),
                        plotOutput(outputId = "CLRD_poison_plot"),
+                       radioButtons(inputId = "Cancer", label = "Death from fatal poisoning versus leading cause of death (Cancer):",
+                                    choice = c("Cancer"),
+                       plotOutput(outputId = "cancer_plot"),
                        p("The plot above compares the death rate from Fatal Poisoning to the leading cause of death, which is Cancer.")
                       )
     )
+  )
 )
+
 
 
