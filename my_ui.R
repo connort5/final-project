@@ -79,9 +79,11 @@ my_ui <- fluidPage(
                          overlap with one another. We can analyze the data throughout the ten years that they overlap with one another and compare them to one another to see if they correlate.
                          It is important to keep in mind that some of the leading of causes of death may not correlate to datal poisoning and vice versa.", class = "question"),
                        radioButtons(inputId = "cause_select", label = "Death from fatal poisoning versus leading cause of death (Cancer):",
-                                    choice = c("Cancer"),
+                                    choice = c("Cancer")),
                        plotOutput(outputId = "CLRD_poison_plot"),
                        p("The plot above compares the death rate from Fatal Poisoning to the leading cause of death, which is Cancer.")
-  )
+                      )
+    )
 )
+
 
