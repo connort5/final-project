@@ -36,7 +36,7 @@ This question will reveal if there has been a consistent trend (i.e. decrease of
 This question is of interest to us because by comparing the rates of fatal poisoning to the rates of the leading causes of death, we could potentially see whether or not there is some overlap in these categories. Therefore by adressing the country's problem of death from drug poisoning we could also lower the excess death rate. 
 
 **Q4. Which percentage of deaths to population (drug usage or heart disease) has seen a bigger increase between the years of 2005-2015? (Connor) **
-This question will provide us with a unique insight as to whether heart disease or drug usage has become an increasing problem in the past 10 years and will provide us with data that can be considered in policy implementation to help lower these numbers. *In this case, the past 10 years will be 2005-2015; the most recent data provided. 
+This question will provide us with a unique insight as to whether heart disease or drug usage has become an increasing problem in the past 10 years and will provide us with data that can be considered in policy implementation to help lower these numbers. *In this case, the past 10 years will be 2005-2015; the most recent data provided. `
 
 
 ## Section 2. Data Description
@@ -143,7 +143,7 @@ A line graph would be effective in displaying the correlation between death from
 
 A line graph showing the rates or changes in rates of death from each cause would be effective in showing how the trend for each cause of death over the years, especially drug poisoning compared to other causes.
 
-![*proposed data visualization for Q4*](visuals/graph_q3.jpg)
+![*proposed data visualization for Q3*](visuals/graph_q3.jpg)
 
 A line graph will allow for an easy visualization of the change in death number for excessive and drug over the fifteen year period. The greater change in deaths can be observed from the larger vertical distance, which will be the key to answering this question. 
 

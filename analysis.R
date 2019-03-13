@@ -181,3 +181,18 @@ drug_sort_by_year_fifteen <- filter(sorted_drug_data, Year == 2015, State != "Un
 drug_five_mean <- na.omit(mean(drug_sort_by_year_five$Deaths))
 drug_fifteen_mean <- na.omit(mean(drug_sort_by_year_fifteen$Deaths))
 year_percent_change_in_drug_deaths <- round(drug_fifteen_mean / drug_five_mean * 100, digits = 2)
+
+###########################
+###  Analysis for Esha ###
+###########################
+
+# Looking at the rate of fatal poisoning
+fatal_poisoning_rate_ <- drug_poisoning %>% #2005 - 2015
+  filter(
+    Year == "2005" | Year == "2006" | Year == "2007" | Year == "2008" | Year == "2009" | Year == "2010" | 
+    Year == "2011" | Year == "2012" | Year == "2013" | Year == "2014" | Year == "2015",
+    Sex == "Both Sexes",
+    Race.and.Hispanic.Origin == "All Races-All Origins"
+  )
+
+# Comparing to the rates of the five leading causes of death 
