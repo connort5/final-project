@@ -194,5 +194,4 @@ fatal_poisoning_rate_ <- drug_poisoning %>% #2005 - 2015
     Sex == "Both Sexes",
     Race.and.Hispanic.Origin == "All Races-All Origins"
   )
-
 # Comparing to the rates of the five leading causes of death 
