@@ -204,6 +204,10 @@ output$CLRD_poison_plot <- renderPlot({
   })
   
   output$explaination <- renderText({
-    paste("The plot above compares the death rate from Fatal Poisoning to the leading cause of death, which is Cancer.")
+    paste("The plot above compares the death rate from Fatal Poisoning to the leading cause of death, which is Cancer, from 2005 to 2015. There is a positive linear trend
+          in that as the death rate for Cancer increases, the death rate from fatal poisoning increases as well. This tells us that there could be a 
+          correlation between cancer and people that die due to poisoning. However, it is important to keep in mind that one problem may not be causing 
+          the other. The best course of action would be to continue to observe these two variables for an increased amount of time in order to see if the 
+          pattern continues, and then decide a course of action from there.")
   })
 }
