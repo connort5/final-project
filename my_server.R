@@ -180,7 +180,7 @@ output$CLRD_poison_plot <- renderPlot({
       filter(Year >= 2005, Year <= 2015) %>%
       select(Year, Deaths) %>%
       group_by(Year) %>%
-      summarize("Drug Poisoning" = sum(Deaths))
+      summarize("Cancer" = sum(Deaths))
     
     filtered_CLRD <- filter_excess_deaths(excess_deaths) %>%
       select(Year, Cause.of.Death, Observed.Deaths) %>%
@@ -197,8 +197,8 @@ output$CLRD_poison_plot <- renderPlot({
     colnames(filtered_CLRD) <- c("Year", "Cancer")
     
     death_plot <- ggplot(data = filtered_CLRD) +
-      geom_point(mapping = aes_string(x = "Drug_Poisoning", y = input$cause_select)) +
-      labs(title = "Deaths by Poisoning vs. Deaths by Other Causes", x = "Deaths by Poisoning", y = paste("Deaths by", str_replace(input$cause_select, "_", " ")))
+      geom_point(mapping = aes_string(x = "Cancer", y = input$cause_select)) +
+      labs(title = "Deaths by Poisoning vs. Deaths by Cancer", x = "Deaths by Poisoning", y = paste("Deaths by Cancer"))
     
     death_plot
   })
